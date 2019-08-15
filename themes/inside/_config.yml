@@ -147,7 +147,7 @@ sns:
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
-  github:
+  github: https://github.com/MoeCasts
   twitter:
   facebook:
   instagram:
@@ -202,7 +202,7 @@ post:
   # The following settings are the same as the page
   # toc: false
   # reward: true
-  # copyright: true
+  copyright: true
 
 # Archive
 archive:
@@ -302,14 +302,14 @@ reward:
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Display author, default to `true`
-  # author: true
+  author: false
 
   # Display link, default to `true`
   # link: false
 
-  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
-  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
-  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+  license: 自由转载-非商用-禁止演绎-保持署名
+    (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
+    rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
 
   # Display published date, default to `false`
   # published: false
@@ -331,12 +331,12 @@ comments:
   #   # Autoload, default to `true`, set to `false` to display a button
   #   autoload: false
 
-  # livere:
-  #   uid: livere_uid
-  #   # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
-  #   script:
-  #   # Autoload, default to `true`, set to `false` to display a button
-  #   autoload: false
+  livere:
+    uid: MTAyMC80NjA3Mi8yMjU4Mw==
+    # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
+    # script:
+    # Autoload, default to `true`, set to `false` to display a button
+    # autoload: false
 
 
 # ---------------------------------------------------------------

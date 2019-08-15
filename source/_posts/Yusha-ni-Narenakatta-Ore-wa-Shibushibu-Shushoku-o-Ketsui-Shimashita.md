@@ -1,8 +1,8 @@
 ---
 title: 当不成勇者的我,只好认真找工作了。
 slug: Yusha-ni-Narenakatta-Ore-wa-Shibushibu-Shushoku-o-Ketsui-Shimashita
-date: 2019.05.24 13:49:30
-thumbnail: http://5b0988e595225.cdn.sohucs.com/images/20171007/a7f02e6fe56a4547907cf21109739a4e.jpeg
+date: 2019-05-24 13:49:30
+thumbnail: /images/cover/Yusha-ni-Narenakatta-Ore-wa-Shibushibu-Shushoku-o-Ketsui-Shimashita.jpeg
 categories:
 - 补番
 tags:
@@ -13,7 +13,7 @@ tags:
 - 奇幻
 ---
 
-## 简 & 评
+## 简 & 论
 故事讲述魔王提前被人打倒，让少年劳尔无法通过试炼成为主人公，梦想破灭的劳尔来到王都一家魔法商店打工，结果和魔王的女儿菲诺成为工友的故事。
 魔王竟然在勇者测验前夕被打倒，导致少年·劳尔当不成勇者。从小到大的梦想破灭、怀才不遇的劳尔，如今在王都的魔法商店讨生活。
 起初的劳尔因无法实现梦想，迫于生计只能在魔法商店就职。即使心有不甘，却无可奈何。就这样愤懑的生活着。

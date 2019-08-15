@@ -5,12 +5,11 @@ date: 2019-08-14 12:11:31
 categories:
 - Coding
 tags:
-- vue
-- laradock
+- Vue.js
+- Laradock
 ---
 
 # 在 Laradock 中开发 Vue 项目
-
 
 ## 添加本地域名
 
