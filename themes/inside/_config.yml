@@ -363,7 +363,7 @@ favicon: /images/favicon.ico
 # SEO
 seo:
   # Render structured-data in <head>, default to `false`
-  # structured_data: true
+  structured_data: true
 
 # PWA
 pwa:
@@ -422,7 +422,7 @@ pwa:
 # ```bash
 # npm install babel-core babel-preset-env html-minifier uglify-js --save
 # ```
-# plugins:
+plugins:
 #   # Dynamic inject html snippet
 #   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
 
@@ -436,7 +436,7 @@ pwa:
 #   # scripts will be injected into <body>, and styles will be injected into <head>
 #   # In general, script or style depends on their ext name.
 #   - //xxx.css
-#   - //xxx.js
+  - https://zz.bdstatic.com/linksubmit/push.js
 
 #   # A few more flexible examples
 

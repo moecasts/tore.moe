@@ -2,7 +2,7 @@
 title: 当不成勇者的我,只好认真找工作了。
 slug: Yusha-ni-Narenakatta-Ore-wa-Shibushibu-Shushoku-o-Ketsui-Shimashita
 date: 2019-05-24 13:49:30
-thumbnail: /images/cover/Yusha-ni-Narenakatta-Ore-wa-Shibushibu-Shushoku-o-Ketsui-Shimashita.jpeg
+thumbnail: https://i.loli.net/2019/08/16/a7dwAS82xGlKFCH.jpg
 categories:
 - 补番
 tags:

@@ -75,9 +75,15 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: inside
 
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: https://git.dev.tencent.com/YumeYui/Hexo.git
   branch: coding-pages
+  ignore: ./source/images/cover/
