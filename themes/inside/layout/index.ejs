@@ -28,5 +28,8 @@
 <body lang="<%= config.language %>">
 <%- `<${theme.runtime.rootSelector}></${theme.runtime.rootSelector}>` %>
 <%- theme.scripts %>
+<% if (theme.mermaid.enable) { -%>
+<script src='https://cdn.bootcss.com/mermaid/<%- theme.mermaid.version %>/mermaid.min.js'></script>
+<% } -%>
 </body>
 </html>
