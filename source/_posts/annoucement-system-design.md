@@ -2,6 +2,7 @@
 title: 公告系统的数据库设计
 slug: annoucement-system-design
 date: 2019-08-15 14:35:51
+thumbnail: https://s2.ax1x.com/2019/10/06/ughf9x.png
 categories:
 - Coding
 tags:

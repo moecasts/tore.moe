@@ -2,6 +2,7 @@
 title: 在 Laradock 中开发 Vue 项目
 slug: develop-vue-project-with-laradock
 date: 2019-08-14 12:11:31
+thumbnail: https://s2.ax1x.com/2019/10/07/ug4mKU.md.png
 categories:
 - Coding
 tags:

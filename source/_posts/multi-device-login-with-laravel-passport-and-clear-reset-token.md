@@ -2,6 +2,7 @@
 title: Laravel Passport 实现多端登陆且不生成多余的 token
 slug: multi-device-login-with-laravel-passport-and-clear-reset-token
 date: 2019-08-15 14:32:30
+thumbnail: https://s2.ax1x.com/2019/10/07/ug4l5R.md.png
 categories:
 - Coding
 tags:

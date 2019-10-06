@@ -2,6 +2,7 @@
 title: 程序员推荐书单
 slug: awesome-programming-books
 date: 2019-08-15 15:30:44
+thumbnail: https://s2.ax1x.com/2019/10/06/ughe7d.md.png
 categories:
 - Coding
 tags:
@@ -13,8 +14,6 @@ copyright:
   link: true
 
 ---
-
-
 
 # Preface
 

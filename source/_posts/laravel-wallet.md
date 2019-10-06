@@ -2,6 +2,7 @@
 title: Laravel 虚拟钱包扩展包
 slug: laravel-wallet
 date: 2019-08-15 14:52:22
+thumbnail: https://s2.ax1x.com/2019/10/06/ughGng.md.png
 categories:
 - Coding
 tags:
