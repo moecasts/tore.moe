@@ -2,7 +2,7 @@
 title: 群居姐妹
 slug: Danchigai
 date: 2019-06-02 15:26:36
-thumbnail: https://s2.ax1x.com/2019/10/06/ug3Jwn.md.jpg
+thumbnail: https://s2.ax1x.com/2019/10/07/ug7Q9s.md.jpg
 categories:
 - 补番
 tags:

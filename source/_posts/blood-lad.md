@@ -2,7 +2,7 @@
 title: 热血少年
 slug: blood-lad
 date: 2019-08-27 12:55:33
-thumbnail: https://s2.ax1x.com/2019/10/06/ug3wSU.md.png
+thumbnail: https://s2.ax1x.com/2019/10/07/ug7pAe.md.png
 categories:
 - 补番
 tags:

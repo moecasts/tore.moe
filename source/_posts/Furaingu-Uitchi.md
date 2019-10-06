@@ -2,7 +2,7 @@
 title: 飞翔的魔女
 slug: Furaingu-Uitchi
 date: 2019-09-01 14:08:48
-thumbnail: https://s2.ax1x.com/2019/10/06/ug3Yoq.md.png
+thumbnail: https://s2.ax1x.com/2019/10/07/ugTBm8.md.jpg
 categories:
 - 补番
 tags:

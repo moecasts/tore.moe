@@ -2,7 +2,7 @@
 title: 鬼灭之刃
 slug: Kimetsu-no-Yaiba
 date: 2019-09-30 23:04:07
-thumbnail: https://s2.ax1x.com/2019/10/06/ug2KQe.md.png
+thumbnail: https://s2.ax1x.com/2019/10/07/ugIJBD.md.jpg
 categories:
 - 补番
 tags:

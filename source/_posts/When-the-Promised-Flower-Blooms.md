@@ -2,7 +2,7 @@
 title: 朝花夕誓——于离别之朝束起约定之花
 slug: When-the-Promised-Flower-Blooms
 date: 2019-09-09 11:18:07
-thumbnail: https://s2.ax1x.com/2019/10/06/ugGfqH.md.jpg
+thumbnail: https://s2.ax1x.com/2019/10/07/ugTpzq.md.jpg
 categories:
 - 补番
 tags:

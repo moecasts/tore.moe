@@ -2,7 +2,7 @@
 title: 好想告诉你
 slug: Kimi-ni-Todoke
 date: 2019-09-26 19:13:24
-thumbnail: https://s2.ax1x.com/2019/10/06/ugDdET.jpg
+thumbnail: https://s2.ax1x.com/2019/10/07/ugIxv6.jpg
 tags:
 - 日常
 - 校园

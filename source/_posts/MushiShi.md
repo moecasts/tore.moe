@@ -2,7 +2,7 @@
 title: 虫师
 slug: MushiShi
 date: 2019-09-26 19:13:46
-thumbnail: https://s2.ax1x.com/2019/10/06/ugBRhQ.md.jpg
+thumbnail: https://s2.ax1x.com/2019/10/07/ugIouT.md.jpg
 categories:
 - 补番
 tags:

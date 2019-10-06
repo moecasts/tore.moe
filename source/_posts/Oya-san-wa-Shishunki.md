@@ -2,7 +2,7 @@
 title: 房东妹子青春期
 slug: Oya-san-wa-Shishunki
 date: 2019-06-02 15:25:19
-thumbnail: https://s2.ax1x.com/2019/10/06/ug36T1.md.jpg
+thumbnail: https://s2.ax1x.com/2019/10/07/ug71cq.md.jpg
 categories:
 - 补番
 tags:
