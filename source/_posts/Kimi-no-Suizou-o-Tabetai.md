@@ -2,7 +2,7 @@
 title: 我想吃掉你的胰脏
 slug: Kimi-no-Suizou-o-Tabetai
 date: 2019-09-08 10:20:57
-thumbnail: https://i.loli.net/2019/09/08/QDomE2uxHN5ZaTc.png
+thumbnail: https://s2.ax1x.com/2019/10/06/ug3By4.md.png
 categories:
 - 补番
 tags:

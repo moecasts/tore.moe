@@ -2,7 +2,7 @@
 title: Manjaro Xfce 折腾日志
 slug: manjaro-xfce-hacking
 date: 2019-08-18 12:59:28
-thumbnail: https://i.loli.net/2019/08/18/YvORcpU6fdwT8si.png
+thumbnail: https://s2.ax1x.com/2019/10/06/ug3ywR.png
 categories:
 - Hacking
 tags:

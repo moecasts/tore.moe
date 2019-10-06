@@ -2,7 +2,7 @@
 title: 樱子小姐的脚下埋着尸体
 slug: Sakurako-san-no-Ashimoto-ni-wa-Shitai-ga-Umatteiru
 date: 2019-05-20 13:37:00
-thumbnail: https://i.loli.net/2019/08/16/X9p16eWThCSqdiB.png
+thumbnail: https://s2.ax1x.com/2019/10/06/ug3gFx.md.png
 categories:
 - 补番
 tags:

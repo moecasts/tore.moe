@@ -2,7 +2,7 @@
 title: 文件切片上传、秒传
 slug: upload-file-by-chunk-and-ingore-upload
 date: 2019-08-31 12:35:04
-thumbnail: https://i.loli.net/2019/08/31/xKPlgkuLEiz1IO6.png
+thumbnail: https://s2.ax1x.com/2019/10/06/ugGE5t.md.png
 categories:
 - Coding
 tags:

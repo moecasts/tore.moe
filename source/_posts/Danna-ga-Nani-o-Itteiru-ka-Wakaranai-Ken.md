@@ -2,7 +2,7 @@
 title: 关于完全听不懂老公在说什么的事
 slug: Danna-ga-Nani-o-Itteiru-ka-Wakaranai-Ken
 date: 2019-06-01 15:06:24
-thumbnail: https://i.loli.net/2019/08/16/4XSOUHV9KnMwmDl.jpg
+thumbnail: https://s2.ax1x.com/2019/10/06/ug3UYV.md.jpg
 categories:
 - 补番
 tags:
