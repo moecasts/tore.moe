@@ -75,6 +75,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: inside
 
+aplayer:
+  meting: true
+  meting_api: https://cloud.i-meto.com/meting/api
+  asset_inject: false
+
 sitemap:
   path: sitemap.xml
 baidusitemap:

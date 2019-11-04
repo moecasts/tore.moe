@@ -96,7 +96,7 @@ module.exports = function (data) {
   processData.assetPath = assetPath
   data.content = processHtml(data.content, processData);
   data.excerpt = processHtml(data.excerpt, processData);
-
+  
   // toc
   if (hasToc && theme[data.type].toc && data.toc !== false) {
     const toc = parseToc(data.content, theme.toc.depth);
