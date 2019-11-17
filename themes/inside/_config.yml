@@ -137,6 +137,7 @@ menu:
   主页: /
   编程: /categories/Coding
   补番: /categories/补番
+  小说: /categories/Novel
   # Github: https://github.com/username
 
 # Social media URL
@@ -433,6 +434,9 @@ plugins:
 #   # In general, script or style depends on their ext name.
 #   - //xxx.css
   - https://zz.bdstatic.com/linksubmit/push.js
+  - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css
+  - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js
+  - https://unpkg.com/meting@2.0.1/dist/Meting.min.js
   # - tag: script
   #   code: |
   #     var meting_api='https://cloud.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r'
