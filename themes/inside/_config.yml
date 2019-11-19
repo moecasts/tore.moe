@@ -190,7 +190,7 @@ page:
   # toc: false
 
   # Display reward, default to `false`
-  # reward: true
+  reward: true
 
   # Display copyright notice, default to `false`
   # copyright: true
@@ -202,7 +202,7 @@ post:
 
   # The following settings are the same as the page
   # toc: false
-  # reward: true
+  reward: true
   copyright: true
 
 # Archive
@@ -287,12 +287,18 @@ toc:
 # Reward
 reward:
   # Text which shows at the top.
-  # text: Buy me a cup of coffee ☕.
+  text: Buy me a cup of coffee ☕.
 
   # Payment Methods
   # qrcode, url and text must be set at least one
   # wechat, alipay, paypal and bitcoin has built-in icon and color themes,
   # use `name` to apply
+  methods:
+    - name: wechat
+      qrcode: /images/wechatPay.png
+      url: https://paypal.me/imelmore
+      text: This is a Wechat Pay qrcode
+
   # methods:
   #   - name: paypal
   #     qrcode: paypal.jpg
@@ -437,9 +443,15 @@ plugins:
   - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css
   - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js
   - https://unpkg.com/meting@2.0.1/dist/Meting.min.js
-  # - tag: script
-  #   code: |
-  #     var meting_api='https://cloud.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r'
+  - tag: script
+    code: |
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?81370a852ec0f0358817239d481d4623";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
   # - /assets/css/APlayer.min.css
   # - /assets/js/APlayer.min.js
   # - /assets/js/Meting.min.js
