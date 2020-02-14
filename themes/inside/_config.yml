@@ -65,38 +65,6 @@ appearance:
     '#a1efe4', '#66d9ef', '#f92672', '#cc6633'
   ]
 
-  # Monokai Pro
-  # highlight: [
-  #   '#2d2a2e', '#565457', '#807e80', '#a9a8a8',
-  #   '#d3d2d1', '#fcfcfa', '#fefefd', '#ffffff',
-  #   '#ff6188', '#19181a', '#ffd866', '#a9dc76',
-  #   '#78dce8', '#ab9df2', '#fc9867', '#221f22'
-  # ]
-
-  # Material
-  # highlight: [
-  #   '#263238', '#2C393F', '#37474F', '#707880',
-  #   '#C9CCD3', '#CDD3DE', '#D5DBE5', '#FFFFFF',
-  #   '#EC5F67', '#EA9560', '#FFCC00', '#8BD649',
-  #   '#80CBC4', '#89DDFF', '#82AAFF', '#EC5F67'
-  # ]
-
-  # Ocean
-  # highlight: [
-  #   '#2b303b', '#343d46', '#4f5b66', '#65737e',
-  #   '#a7adba', '#c0c5ce', '#dfe1e8', '#eff1f5',
-  #   '#bf616a', '#d08770', '#ebcb8b', '#a3be8c',
-  #   '#96b5b4', '#8fa1b3', '#b48ead', '#ab7967'
-  # ]
-
-  # Material-dark
-  # highlight: [
-  #   '#263238', '#2E3C43', '#314549', '#546E7A',
-  #   '#B2CCD6', '#EEFFFF', '#EEFFFF', '#FFFFFF',
-  #   '#F07178', '#F78C6C', '#FFCB6B', '#C3E88D',
-  #   '#89DDFF', '#82AAFF', '#C792EA', '#FF5370'
-  # ]
-
   # Default Light by Chris Kempson (http://chriskempson.com)
   # highlight: [
   #   '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
@@ -220,7 +188,7 @@ category:
 # Search
 search:
   # Display a quick search button in fab
-  fab: true
+  # fab: true
 
   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
   # page: true
@@ -291,7 +259,7 @@ reward:
 
   # Payment Methods
   # qrcode, url and text must be set at least one
-  # wechat, alipay, paypal and bitcoin has built-in icon and color themes,
+  # wechat, alipay, paypal and bitcoin has a built-in icon,
   # use `name` to apply
   methods:
     - name: wechat
@@ -299,17 +267,11 @@ reward:
       url: https://paypal.me/imelmore
       text: This is a Wechat Pay qrcode
 
-  # methods:
-  #   - name: paypal
-  #     qrcode: paypal.jpg
-  #     url: https://paypal.me/imelmore
-  #     text: This is a paypal payment link
-
 # Copyright notice
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Display author, default to `true`
-  author: false
+  author: true
 
   # Display link, default to `true`
   # link: false
@@ -429,6 +391,7 @@ pwa:
 plugins:
 #   # Dynamic inject html snippet
 #   - position: # `sidebar` | `post` | `page` | `comments` | `avatar`, can be an array
+
 #     # HTML code
 #     template: |
 #       <script>...</script>
@@ -439,6 +402,7 @@ plugins:
 #   # scripts will be injected into <body>, and styles will be injected into <head>
 #   # In general, script or style depends on their ext name.
 #   - //xxx.css
+#   - //xxx.js
   - https://zz.bdstatic.com/linksubmit/push.js
   - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css
   - https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js
@@ -452,13 +416,14 @@ plugins:
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
-  # - /assets/css/APlayer.min.css
-  # - /assets/js/APlayer.min.js
-  # - /assets/js/Meting.min.js
-
 #   # A few more flexible examples
 
 #   # <script src="//sample.com/api.php?format=jsonp" id="sample-api" defer></script>
+#   - tag: script # html tag, `script` | `style` | `link`
+#     # Any possible attributes
+#     src: //sample.com/api.php?format=jsonp
+#     id: sample-api
+#     defer: true
 
 #   # <link rel="stylesheet" href="xxx.css" disable>
 #   - tag: link

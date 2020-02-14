@@ -80,10 +80,10 @@ aplayer:
   meting_api: https://cloud.i-meto.com/meting/api
   asset_inject: false
 
-sitemap:
-  path: sitemap.xml
-baidusitemap:
-  path: baidusitemap.xml
+# sitemap:
+#   path: sitemap.xml
+# baidusitemap:
+#   path: baidusitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -98,3 +98,8 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
   version: 8.2.4 # default v7.1.2
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
+
+mathjax:
+  tags: none # or 'ams' or 'all'
+  single_dollars: true
+  ex_factor: 0.5

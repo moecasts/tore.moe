@@ -30,7 +30,12 @@
         "background": { "type": "string" },
         "sidebar_background": { "type": "string" },
         "card_background": { "type": "string" },
-        "content_width": { "type": "number", "minimum": 320 },
+        "content_width": {
+          "oneOf": [
+            { "type": "number" },
+            { "type": "string" }
+          ]
+        },
         "font": {
           "type": "object",
           "properties": {
@@ -131,7 +136,8 @@
               "name": { "type": "string" },
               "text": { "type": "string" },
               "qrcode": { "type": "string" },
-              "url": { "type": "string" }
+              "url": { "type": "string" },
+              "color": { "$ref": "#/definitions/color" }
             },
             "required": ["name"],
             "minProperties": 2,
@@ -150,7 +156,7 @@
         "license": {
           "type": "string",
           "contentMediaType": "text/html" ,
-          "default": "Attribution-NonCommercial-NoDerivatives 4.0 International (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)"
+          "default": "Attribution-NonCommercial-NoDerivatives 4.0 International (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" rel=\"external nofollow noopener\" target=\"_blank\">CC BY-NC-ND 4.0</a>)"
         },
         "published": { "type": "boolean" },
         "updated": { "type": "boolean" },
