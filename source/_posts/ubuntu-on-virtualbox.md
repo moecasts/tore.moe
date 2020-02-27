@@ -27,7 +27,9 @@ tags:
 
 ![image-20200228021607580](./images/ubuntu-on-virtualbox/image-20200228021607580.png)
 
-![image-20200228021709326](./images/ubuntu-on-virtualbox/image-20200228021709326.png)![image-20200228021713583](./images/ubuntu-on-virtualbox/image-20200228021713583.png)
+![image-20200228021709326](./images/ubuntu-on-virtualbox/image-20200228021709326.png)
+
+![image-20200228021713583](./images/ubuntu-on-virtualbox/image-20200228021713583.png)
 
 ![image-20200228021719841](./images/ubuntu-on-virtualbox/image-20200228021719841.png)
 
