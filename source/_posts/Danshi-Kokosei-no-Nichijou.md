@@ -4,7 +4,7 @@ slug: Danshi-Kokosei-no-Nichijou
 date: 2019-09-09 15:08:32
 thumbnail: https://s2.ax1x.com/2019/10/07/ugoSKK.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 搞笑
 - 日常

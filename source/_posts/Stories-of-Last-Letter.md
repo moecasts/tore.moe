@@ -4,7 +4,7 @@ slug: Stories-of-Last-Letter
 date: 2019-11-28 23:19:19
 thumbnail: https://s2.ax1x.com/2019/11/28/QFgeUJ.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 - 治癒

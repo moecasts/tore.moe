@@ -4,9 +4,9 @@ slug: Sakurako-san-no-Ashimoto-ni-wa-Shitai-ga-Umatteiru
 date: 2019-05-20 13:37:00
 thumbnail: https://s2.ax1x.com/2019/10/07/ugHMVO.md.png
 categories:
-- 补番
+- Bangumi
 tags:
-- 补番
+- Bangumi
 - 日本
 - 推理
 - 悬念

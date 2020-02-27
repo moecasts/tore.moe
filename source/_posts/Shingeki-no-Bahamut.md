@@ -4,7 +4,7 @@ slug: Shingeki-no-Bahamut
 date: 2019-08-28 15:00:47
 thumbnail: https://s2.ax1x.com/2019/10/07/ugTTk4.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 冒险
 - 奇幻

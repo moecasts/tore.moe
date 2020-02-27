@@ -4,7 +4,7 @@ slug: Arifureta-Shokugyou-de-Sekai-Saikyou
 date: 2019-10-06 23:08:49
 thumbnail: https://s2.ax1x.com/2019/10/06/ug22SU.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 穿越
 - 冒险

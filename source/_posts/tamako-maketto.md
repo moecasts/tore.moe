@@ -4,7 +4,7 @@ slug: tamako-maketto
 date: 2019-12-21 20:29:11
 thumbnail: https://s2.ax1x.com/2019/12/22/Qxo9TP.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 萌系
 - 少女

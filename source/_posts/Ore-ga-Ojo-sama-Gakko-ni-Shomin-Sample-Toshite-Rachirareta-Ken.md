@@ -4,7 +4,7 @@ slug: Ore-ga-Ojo-sama-Gakko-ni-Shomin-Sample-Toshite-Rachirareta-Ken
 date: 2019-12-18 23:04:10
 thumbnail: https://s2.ax1x.com/2019/12/18/QH7YxP.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 恋爱

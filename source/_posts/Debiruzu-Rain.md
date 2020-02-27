@@ -4,7 +4,7 @@ slug: Debiruzu-Rain
 date: 2019-12-31 19:58:50
 thumbnail: https://s2.ax1x.com/2019/12/31/l3sExe.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 恋爱
 - 奇幻

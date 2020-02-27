@@ -4,7 +4,7 @@ slug: What-Do-You-Do-at-the-End-of-the-World-Are-You-Busy-Will-You-Save-Us
 date: 2019-10-14 00:36:52
 thumbnail: https://s2.ax1x.com/2019/10/14/uxvMVg.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 末日
 - 奇幻

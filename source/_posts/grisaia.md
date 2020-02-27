@@ -4,7 +4,7 @@ slug: grisaia
 date: 2019-10-09 00:37:52
 thumbnail: https://s2.ax1x.com/2019/10/09/uhvQaj.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 游改
 - 后宫

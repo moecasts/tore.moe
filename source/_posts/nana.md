@@ -4,7 +4,7 @@ slug: nana
 date: 2020-01-29 22:20:55
 thumbnail: https://s2.ax1x.com/2020/01/29/1QTqit.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 恋爱
 - 少女漫

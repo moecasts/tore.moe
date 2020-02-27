@@ -4,7 +4,7 @@ slug: Rainbow-Days
 date: 2019-12-10 22:22:54
 thumbnail: https://s2.ax1x.com/2019/12/10/QDOHyT.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 恋爱

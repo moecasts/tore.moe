@@ -4,7 +4,7 @@ slug: Isshukan-furenzu
 date: 2020-01-06 00:17:48
 thumbnail: https://s2.ax1x.com/2020/01/06/lrMC38.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 恋爱

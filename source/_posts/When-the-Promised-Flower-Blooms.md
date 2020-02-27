@@ -4,7 +4,7 @@ slug: When-the-Promised-Flower-Blooms
 date: 2019-09-09 11:18:07
 thumbnail: https://s2.ax1x.com/2019/10/07/ugTpzq.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 ---

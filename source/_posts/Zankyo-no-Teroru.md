@@ -4,7 +4,7 @@ slug: Zankyo-no-Teroru
 date: 2019-12-11 21:17:33
 thumbnail: https://s2.ax1x.com/2019/12/11/Qs5NZR.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 恐怖
 - 心理

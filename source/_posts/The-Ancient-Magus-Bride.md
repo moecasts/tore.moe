@@ -4,7 +4,7 @@ slug: The-Ancient-Magus-Bride
 date: 2019-11-25 13:36:17
 thumbnail: https://s2.ax1x.com/2019/11/28/QPTW0P.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 魔法
 - 奇幻

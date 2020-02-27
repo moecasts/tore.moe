@@ -4,7 +4,7 @@ slug: Danna-ga-Nani-o-Itteiru-ka-Wakaranai-Ken
 date: 2019-06-01 15:06:24
 thumbnail: https://s2.ax1x.com/2019/10/07/ug7kct.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 狗粮
 - 宅

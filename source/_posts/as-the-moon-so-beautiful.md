@@ -4,7 +4,7 @@ slug: as-the-moon-so-beautiful
 thumbnail: https://s2.ax1x.com/2019/11/13/M8yBcj.md.png
 date: 2019-11-13 01:08:56
 categories:
-- 补番
+- Bangumi
 tags:
 - 恋爱
 - 校园

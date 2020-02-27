@@ -4,7 +4,7 @@ slug: MondaiJi-tachi-ga-Isekai-Kara-Kuru-Soudesuyo
 date: 2019-11-04 09:24:35
 thumbnail: https://s2.ax1x.com/2019/11/04/KvkPr8.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 - 喜剧

@@ -4,7 +4,7 @@ slug: Silver-Spoon
 date: 2019-12-16 23:29:29
 thumbnail: https://s2.ax1x.com/2019/12/16/Q5Rwsx.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 青春

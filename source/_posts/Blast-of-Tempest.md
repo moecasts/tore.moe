@@ -4,7 +4,7 @@ slug: Blast-of-Tempest
 date: 2019-12-24 01:25:05
 thumbnail: https://s2.ax1x.com/2019/12/24/lCCcsH.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 推理
 - 奇幻

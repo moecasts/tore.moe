@@ -4,7 +4,7 @@ slug: high-school-dxd
 date: 2020-02-14 21:04:38
 thumbnail: https://s2.ax1x.com/2020/02/15/1vDIde.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 - 后宫

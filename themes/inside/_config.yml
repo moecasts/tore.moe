@@ -96,7 +96,7 @@ profile:
   email: moecasts.caster@gmail.com
 
   # You can set Avatar URL directly
-  avatar: https://s2.ax1x.com/2019/08/14/mkDtZq.th.jpg
+  avatar: https://s2.ax1x.com/2020/02/28/3BS9x0.th.jpg
 
   bio: 「生まれて、すみません」
 
@@ -104,7 +104,7 @@ profile:
 menu:
   主页: /
   编程: /categories/Coding
-  补番: /categories/补番
+  补番: /categories/Bangumi
   小说: /categories/Novel
   游戏: /categories/Games
   # Github: https://github.com/username

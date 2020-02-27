@@ -4,7 +4,7 @@ slug: Nerawareta-Gakuen
 date: 2019-12-19 20:26:10
 thumbnail: https://s2.ax1x.com/2019/12/19/QLPSsS.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 科幻

@@ -4,7 +4,7 @@ slug: log-horizon
 date: 2019-11-30 23:07:30
 thumbnail: https://s2.ax1x.com/2019/11/30/QZUUOg.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 游戏
 - 魔幻

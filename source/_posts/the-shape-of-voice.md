@@ -4,7 +4,7 @@ slug: the-shape-of-voice
 date: 2019-10-08 09:55:36
 thumbnail: https://s2.ax1x.com/2019/10/08/uWrSXj.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 社会
 - 校园

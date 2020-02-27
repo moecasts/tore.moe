@@ -4,7 +4,7 @@ slug: Rokujoma-no-shinryaku-sha
 date: 2019-10-29 20:34:58
 thumbnail: https://s2.ax1x.com/2019/10/29/KfV2S1.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 轻小说改
 - 少女

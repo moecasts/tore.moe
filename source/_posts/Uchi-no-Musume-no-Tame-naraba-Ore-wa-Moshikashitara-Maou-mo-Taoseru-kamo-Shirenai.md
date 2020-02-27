@@ -4,7 +4,7 @@ slug: Uchi-no-Musume-no-Tame-naraba-Ore-wa-Moshikashitara-Maou-mo-Taoseru-kamo-S
 date: 2020-01-12 17:16:00
 thumbnail: https://s2.ax1x.com/2020/01/12/looHfg.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 - 冒险

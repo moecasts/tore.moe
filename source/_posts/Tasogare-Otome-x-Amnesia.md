@@ -4,7 +4,7 @@ slug: Tasogare-Otome-x-Amnesia
 date: 2019-11-01 20:33:15
 thumbnail: https://s2.ax1x.com/2019/11/01/KHx1jx.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 校园
 - 怪谈

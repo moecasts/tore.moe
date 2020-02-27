@@ -4,7 +4,7 @@ slug: Owari-no-Seraph
 date: 2019-10-16 20:11:28
 thumbnail: https://s2.ax1x.com/2019/10/16/KFhffI.md.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 奇幻
 - 战争

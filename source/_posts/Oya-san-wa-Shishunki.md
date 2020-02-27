@@ -4,7 +4,7 @@ slug: Oya-san-wa-Shishunki
 date: 2019-06-02 15:25:19
 thumbnail: https://s2.ax1x.com/2019/10/07/ug71cq.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 泡面番
 - 喜剧

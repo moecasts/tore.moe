@@ -4,7 +4,7 @@ slug: MushiShi
 date: 2019-09-26 19:13:46
 thumbnail: https://s2.ax1x.com/2019/10/07/ugIouT.md.jpg
 categories:
-- 补番
+- Bangumi
 tags:
 - 治愈
 - 冒险

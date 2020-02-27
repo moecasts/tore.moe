@@ -4,7 +4,7 @@ slug: smile-salesman
 date: 2019-10-23 12:50:31
 thumbnail: https://s2.ax1x.com/2019/10/29/KfVITe.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 搞笑
 - 社会

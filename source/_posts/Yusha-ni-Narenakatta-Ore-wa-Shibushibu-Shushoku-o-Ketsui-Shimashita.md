@@ -4,7 +4,7 @@ slug: Yusha-ni-Narenakatta-Ore-wa-Shibushibu-Shushoku-o-Ketsui-Shimashita
 date: 2019-05-24 13:49:30
 thumbnail: https://s2.ax1x.com/2019/10/06/ugf7Yq.png
 categories:
-- 补番
+- Bangumi
 tags:
 - 魔法
 - 战斗
