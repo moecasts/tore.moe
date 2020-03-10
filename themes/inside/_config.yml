@@ -96,7 +96,7 @@ profile:
   email: moecasts.caster@gmail.com
 
   # You can set Avatar URL directly
-  avatar: https://s2.ax1x.com/2020/02/28/3BS9x0.th.jpg
+  avatar: ./images/avatar.jpg
 
   bio: 「生まれて、すみません」
 

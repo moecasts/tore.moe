@@ -55,14 +55,14 @@ tags:
 
 ## 安装
 
-![软件列表](https://s2.ax1x.com/2020/02/22/3KDiUf.png)
+![软件列表](./images/galgame/3KDiUf.png)
 
 下载完后该安装的安装，该解压的解压。
 
 
 > 安装 mecab 时，要注意编码方式的选择，我选择的是 UFT-8，若软件开启 mecab 功能后，翻译问题出错的话，可能是编码方式错误，重新安装选择正确的编码方式即可。
 
-![macab-install](https://s2.ax1x.com/2020/02/22/3KDE8g.png)
+![macab-install](./images/galgame/3KDE8g.png)
 
 
 ## 配置
@@ -71,13 +71,13 @@ tags:
 
 选择 **LEProc** 文件即可。修改完记得将其设为默认并且点保存。
 
-![3KDl5T.png](https://s2.ax1x.com/2020/02/22/3KDl5T.png)
+![3KDl5T.png](./images/galgame/3KDl5T.png)
 
 ### 分词软件设置
 
 选择 `path/to/mecab/bin/libmecab.dll` 文件，并启用。
 
-![3KDNrR.png](https://s2.ax1x.com/2020/02/22/3KDNrR.png)
+![3KDNrR.png](./images/galgame/3KDNrR.png)
 
 #### 翻译器设置
 
