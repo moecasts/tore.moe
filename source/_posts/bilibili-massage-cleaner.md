@@ -23,7 +23,7 @@ tags:
 
 ## 安装
 
-油猴脚本安装地址：[https://greasyfork.org/zh-CN/scripts/398463-bilibili-%E6%B6%88%E6%81%AF%E6%B8%85%E7%90%86%E5%8A%A9%E6%89%8B](https://greasyfork.org/zh-CN/scripts/398463-bilibili-消息清理助手)
+油猴脚本安装地址：[https://greasyfork.org/zh-CN/scripts/398463-bilibili-消息清理助手](https://greasyfork.org/zh-CN/scripts/398464-bilibili-%E6%B6%88%E6%81%AF%E6%B8%85%E7%90%86%E5%8A%A9%E6%89%8B)
 
 ![image-20200323015656553](/images/bilibili-message-cleaner/image-20200323015656553.png)
 
