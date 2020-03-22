@@ -2,16 +2,18 @@
 title: Laravel 虚拟钱包扩展包
 slug: laravel-wallet
 date: 2019-08-15 14:52:22
+mathjax: false
 thumbnail: https://s2.ax1x.com/2019/10/06/ughGng.md.png
 categories:
-- Coding
+  - Coding
 tags:
-- Laravel
-- Package
-- Wallet
+  - Laravel
+  - Package
+  - Wallet
 ---
 
 # 项目地址
+
 https://github.com/MoeCasts/laravel-wallet
 
 ## 自动化测试
@@ -35,6 +37,7 @@ https://github.com/MoeCasts/laravel-wallet
 ## 安装
 
 ### 需求
+
 - PHP 7.0+
 - Laravel 5.5+
 
@@ -44,7 +47,7 @@ https://github.com/MoeCasts/laravel-wallet
 composer require moecasts/laravel-wallet
 ```
 
-如果你是用 `Laravel` 的版本 < 5.5，则需要手动将 `provide` 添加到 `config/app.php providers`   数组中
+如果你是用 `Laravel` 的版本 < 5.5，则需要手动将 `provide` 添加到 `config/app.php providers` 数组中
 
 ```php
 Moecasts\Laravel\Wallet\WalletServiceProvider,
@@ -78,7 +81,6 @@ class User extends Model
     use HasWallets;
 }
 ```
-
 
 ## 配置
 
@@ -171,6 +173,7 @@ $wallet->forceWithdraw(233)
 ```
 
 ### 兑换
+
 添加 `exchange` 配置到 `config/wallet.php`.
 
 ```php
@@ -212,7 +215,6 @@ $wallet->safeExchange('POI', 10)
 $wallet->forceExchange('POI', 10)
 ```
 
-
 ### 转账
 
 添加 `Transferable` Interface 到 `User` Model.
@@ -241,12 +243,12 @@ $wallet->transfer($transferable, 233);
 // 当有错误发生时返回 null
 $wallet->safeTransfer($transferable, 233);
 ```
+
 `Transferable` 所拥有的同类型货币的钱包将收到货款。
 
 ### 支付
 
 添加 `HasWallets` Trait 和 `Product` 到 `Item` Model.
-
 
 ```php
 use Moecasts\Laravel\Wallet\Interfaces\Product;
@@ -354,6 +356,7 @@ $wallet->paid($item, $action = 'paid')
 ```
 
 ## 退款
+
 添加 `Refundable` Interface 到 `Item` Model.
 
 ```php
