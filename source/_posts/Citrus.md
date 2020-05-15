@@ -2,7 +2,7 @@
 title: Citrus
 slug: Citrus
 date: 2020-05-15 14:03:11
-thumbnail: ./images/cover/cirtus.jpeg
+thumbnail: ./images/cover/citrus.jpeg
 categories:
 - Bangumi
 tags:

@@ -1,8 +1,14 @@
 ---
-title: Devilman-Crybaby
+title: 恶魔人Crybaby
+slug: Devilman-Crybaby
 date: 2020-05-15 14:03:33
+thumbnail: ./images/cover/devilman-crybaby.png
+categories:
+- Bangumi
 tags:
-- 
+- 社会
+- 暴力
+- 黑暗
 ---
 
 ## 简
