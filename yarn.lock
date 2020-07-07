@@ -94,6 +94,36 @@
   resolved "http://r.cnpmjs.org/@types/color-name/download/@types/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha1-HBJhu+qhCoBVu8XYq4S3sq/IRqA=
 
+"@types/minimatch@^3.0.3":
+  version "3.0.3"
+  resolved "https://r.cnpmjs.org/@types/minimatch/download/@types/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+  integrity sha1-PcoOPzOyAPx9ETnAzZbBJoyt/Z0=
+
+"@types/node@*":
+  version "14.0.13"
+  resolved "https://r.cnpmjs.org/@types/node/download/@types/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
+  integrity sha1-7hEo6IG4dMNxN0wfciAYk2FkF8k=
+
+"@types/node@^9.4.1":
+  version "9.6.56"
+  resolved "https://r.cnpmjs.org/@types/node/download/@types/node-9.6.56.tgz#036f665320d2f04bd62c0cd83222254a6a3b4437"
+  integrity sha1-A29mUyDS8EvWLAzYMiIlSmo7RDc=
+
+"@types/ssh2-streams@*", "@types/ssh2-streams@^0.1.2":
+  version "0.1.7"
+  resolved "https://r.cnpmjs.org/@types/ssh2-streams/download/@types/ssh2-streams-0.1.7.tgz#bf79349ec85a4dfb5b3fd9f4a05af729121f07e6"
+  integrity sha1-v3k0nshaTftbP9n0oFr3KRIfB+Y=
+  dependencies:
+    "@types/node" "*"
+
+"@types/ssh2@^0.5.33":
+  version "0.5.43"
+  resolved "https://r.cnpmjs.org/@types/ssh2/download/@types/ssh2-0.5.43.tgz#a4b8fc0288ef79a0d2d89363644d0b4448fe9532"
+  integrity sha1-pLj8AojveaDS2JNjZE0LREj+lTI=
+  dependencies:
+    "@types/node" "*"
+    "@types/ssh2-streams" "*"
+
 JSONStream@^1.0.7:
   version "1.3.5"
   resolved "http://r.cnpmjs.org/JSONStream/download/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
@@ -260,6 +290,13 @@ asap@^2.0.3:
   version "2.0.6"
   resolved "http://r.cnpmjs.org/asap/download/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
+
+asn1@~0.2.0:
+  version "0.2.4"
+  resolved "https://r.cnpmjs.org/asn1/download/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"
+  integrity sha1-jSR136tVO7M+d7VOWeiAu4ziMTY=
+  dependencies:
+    safer-buffer "~2.1.0"
 
 assign-symbols@^1.0.0:
   version "1.0.0"
@@ -482,7 +519,7 @@ chalk@^1.1.1:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
+chalk@^2.0.0, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "http://r.cnpmjs.org/chalk/download/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ=
@@ -1344,6 +1381,13 @@ hexo-deployer-git@^1.0.0:
     moment "^2.18.0"
     swig-templates "^2.0.2"
 
+hexo-deployer-sftp@^0.4.1:
+  version "0.4.1"
+  resolved "https://r.cnpmjs.org/hexo-deployer-sftp/download/hexo-deployer-sftp-0.4.1.tgz#dcedb436c8cfbefdc3d526677de6fec6f9de418f"
+  integrity sha1-3O20NsjPvv3D1SZnfeb+xvneQY8=
+  dependencies:
+    sftp-sync-deploy "^0.8.0"
+
 hexo-filter-mathjax@^0.3.1:
   version "0.3.1"
   resolved "http://r.cnpmjs.org/hexo-filter-mathjax/download/hexo-filter-mathjax-0.3.1.tgz#a910a7cae61fb8149082d346ff6de2e87b7a0a12"
@@ -2193,7 +2237,7 @@ min-indent@^1.0.0:
   resolved "http://r.cnpmjs.org/min-indent/download/min-indent-1.0.0.tgz#cfc45c37e9ec0d8f0a0ec3dd4ef7f7c3abe39256"
   integrity sha1-z8RcN+nsDY8KDsPdTvf3w6vjklY=
 
-"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.4:
+"minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "http://r.cnpmjs.org/minimatch/download/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
@@ -2572,6 +2616,13 @@ punycode.js@^2.1.0:
   resolved "http://r.cnpmjs.org/punycode.js/download/punycode.js-2.1.0.tgz#f3937f7a914152c2dc17e9c280a2cf86a26b7cda"
   integrity sha1-85N/epFBUsLcF+nCgKLPhqJrfNo=
 
+queue@^5.0.0:
+  version "5.0.1"
+  resolved "https://r.cnpmjs.org/queue/download/queue-5.0.1.tgz#17b7d8b8f9ecd563b8b160d4f469b78f5573a368"
+  integrity sha1-F7fYuPns1WO4sWDU9Gm3j1Vzo2g=
+  dependencies:
+    inherits "~2.0.3"
+
 randomatic@^3.0.0:
   version "3.1.1"
   resolved "http://r.cnpmjs.org/randomatic/download/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
@@ -2722,7 +2773,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-safer-buffer@^2.1.2:
+safer-buffer@^2.1.2, safer-buffer@~2.1.0:
   version "2.1.2"
   resolved "http://r.cnpmjs.org/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
@@ -2737,7 +2788,7 @@ sax@~1.2.4:
   resolved "http://r.cnpmjs.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
 
-semver@^5.5.0:
+semver@^5.1.0, semver@^5.5.0:
   version "5.7.1"
   resolved "http://r.cnpmjs.org/semver/download/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=
@@ -2790,6 +2841,20 @@ setprototypeof@1.1.1:
   version "1.1.1"
   resolved "http://r.cnpmjs.org/setprototypeof/download/setprototypeof-1.1.1.tgz#7e95acb24aa92f5885e0abef5ba131330d4ae683"
   integrity sha1-fpWsskqpL1iF4KvvW6ExMw1K5oM=
+
+sftp-sync-deploy@^0.8.0:
+  version "0.8.0"
+  resolved "https://r.cnpmjs.org/sftp-sync-deploy/download/sftp-sync-deploy-0.8.0.tgz#0a07d5be0a484baad2df954a20e694e5b46c47fc"
+  integrity sha1-CgfVvgpIS6rS35VKIOaU5bRsR/w=
+  dependencies:
+    "@types/minimatch" "^3.0.3"
+    "@types/node" "^9.4.1"
+    "@types/ssh2" "^0.5.33"
+    "@types/ssh2-streams" "^0.1.2"
+    chalk "^2.3.0"
+    minimatch "^3.0.3"
+    queue "^5.0.0"
+    ssh2 "^0.5.4"
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -2914,6 +2979,22 @@ sprintf-js@~1.0.2:
   resolved "http://r.cnpmjs.org/sprintf-js/download/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
+ssh2-streams@~0.1.18:
+  version "0.1.20"
+  resolved "https://r.cnpmjs.org/ssh2-streams/download/ssh2-streams-0.1.20.tgz#51118d154555df5469ee1f67e0cf1e7e8a2c0e3a"
+  integrity sha1-URGNFUVV31Rp7h9n4M8efoosDjo=
+  dependencies:
+    asn1 "~0.2.0"
+    semver "^5.1.0"
+    streamsearch "~0.1.2"
+
+ssh2@^0.5.4:
+  version "0.5.5"
+  resolved "https://r.cnpmjs.org/ssh2/download/ssh2-0.5.5.tgz#c7781ecd2ece7304a253cf620fab5a5c22bb2235"
+  integrity sha1-x3gezS7OcwSiU89iD6taXCK7IjU=
+  dependencies:
+    ssh2-streams "~0.1.18"
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "http://r.cnpmjs.org/static-extend/download/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -2926,6 +3007,11 @@ static-extend@^0.1.1:
   version "1.5.0"
   resolved "http://r.cnpmjs.org/statuses/download/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+
+streamsearch@~0.1.2:
+  version "0.1.2"
+  resolved "https://r.cnpmjs.org/streamsearch/download/streamsearch-0.1.2.tgz#808b9d0e56fc273d809ba57338e929919a1a9f1a"
+  integrity sha1-gIudDlb8Jz2Am6VzOOkpkZoanxo=
 
 string-width@^1.0.1:
   version "1.0.2"

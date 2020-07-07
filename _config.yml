@@ -93,11 +93,19 @@ aplayer:
 #   branch: coding-pages
 #   ignore: ./source/images/cover/
 
+# deploy:
+  # type: git
+  # repo: https://gitee.com/clusteramaryllis/tore.git
+  # branch: coding-pages
+  # ignore: ./source/images/cover/
+
 deploy:
-  type: git
-  repo: https://gitee.com/clusteramaryllis/tore.git
-  branch: coding-pages
-  ignore: ./source/images/cover/
+  type: sftp
+  host: 47.74.17.227
+  user: root
+  pass: Cc.123123
+  remotePath: /www/wwwroot/tore/
+  port: 22
 
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true  # default true
