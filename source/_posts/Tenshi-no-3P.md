@@ -2,7 +2,7 @@
 title: 天使的 three pieces
 slug: Tenshi-no-3P
 date: 2020-08-04 02:52:33
-thunmbnail: ./images/cover/Tenshi-no-3P.jpg
+thumbnail: ./images/cover/Tenshi-no-3P.jpg
 categories:
   - Bangumi
 tags:
