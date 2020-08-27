@@ -4,11 +4,12 @@ slug: Tasogare-Otome-x-Amnesia
 date: 2019-11-01 20:33:15
 thumbnail: https://s2.ax1x.com/2019/11/01/KHx1jx.md.png
 categories:
-- Bangumi
+  - Bangumi
 tags:
-- 校园
-- 怪谈
+  - 校园
+  - 怪谈
 ---
+
 {% meting "583506" "netease" "song" "autoplay" %}
 
 ## 简
@@ -34,7 +35,6 @@ tags:
 面临危险情况时，有人会选择将别人当「盾牌」，来保护自己。亦有人会创造新的「人格」，来替自己承受伤害。
 
 虽然创造新的「人格」没有危害到别人，但终究还是让「其他」的人来替自己受伤。
-
 
 ## 语
 

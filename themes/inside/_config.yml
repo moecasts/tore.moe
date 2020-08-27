@@ -56,7 +56,7 @@ appearance:
   # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
   # the default theme is a customized Atelier Dune Light theme,
   # please feel free to explore more.
-
+  
   # Monokai
   highlight: [
     '#272822', '#383830', '#49483e', '#75715e',
@@ -112,6 +112,7 @@ menu:
   # About: /about
   # Links: /links
   # Github: https://github.com/username
+
 
 # Social media URL
 # Try to sort by changing the order of the keys
@@ -307,10 +308,10 @@ comments:
 
   livere:
     uid: MTAyMC80NjA3Mi8yMjU4Mw==
-    # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
-    # script:
-    # Autoload, default to `true`, set to `false` to display a button
-    # autoload: false
+  #   # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
+  #   script:
+  #   # Autoload, default to `true`, set to `false` to display a button
+  #   autoload: false
 
 
 # ---------------------------------------------------------------
@@ -338,6 +339,8 @@ favicon: /images/favicon.ico
 seo:
   # Render structured-data in <head>, default to `false`
   structured_data: true
+  # Server-side rendering (SSR), default to `false`
+  ssr: true
 
 # PWA
 pwa:
@@ -345,15 +348,15 @@ pwa:
   # libraries for adding offline support to web apps,
   # disabled by default, remove the hash to enable
   workbox:
-  #   # Workbox cdn, uses google by default, below is an example of using alicdn
+    # Workbox cdn, uses google by default, below is an example of using alicdn
     cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
     module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
-  #   # Expire time in hour, 4 by default, set to 0 to be permanent,
-  #   # caches will be forcibly deleted the next time the site is updated.
+    # Expire time in hour, 4 by default, set to 0 to be permanent,
+    # caches will be forcibly deleted the next time the site is updated.
     expire: 4
-  #   # The worker script name, `sw.js` by default
+    # The worker script name, `sw.js` by default
     name: sw.js
-  #   # Custom rules
+    # Custom rules
     rules:
       - name: jsdelivr
         strategy: staleWhileRevalidate
@@ -372,7 +375,7 @@ pwa:
         regex: https://cdn\\.yourdomain\\.com
       - name: json
         strategy: cacheFirst
-        regex: /.*\\.json
+        regex: your_data_prefix/.*\\.json
 
   # manifest.json
   manifest:
@@ -421,6 +424,7 @@ plugins:
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
+
 #   # A few more flexible examples
 
 #   # <script src="//sample.com/api.php?format=jsonp" id="sample-api" defer></script>
