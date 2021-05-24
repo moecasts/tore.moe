@@ -2,19 +2,19 @@
 title: 三月的狮子
 slug: Sangatsu-no-Lion
 date: 2020-05-19 17:59:11
-thumbnail: ./images/cover/sangatsu-no-lion.jpeg
+thumbnail: ./images/cover/Sangatsu-no-Lion.jpeg
 categories:
-- Bangumi
+  - Bangumi
 tags:
-- 温馨
-- 将棋
+  - 温馨
+  - 将棋
 ---
 
 ## 简
 
 这是有关各式各样的人们取回什么的温馨故事，同时也是有关斗争的故事。
 
-主人公桐山零，幼时因为意外事故失去了家人，是一个背负着沉重的孤独的17岁将棋棋士。
+主人公桐山零，幼时因为意外事故失去了家人，是一个背负着沉重的孤独的 17 岁将棋棋士。
 
 独自居住在东京旧市镇桐山零遇见了明里、日向、桃三姐妹，少年桐山零因此发生了改变。
 
