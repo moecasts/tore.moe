@@ -2,7 +2,7 @@
 title: 实现 JavaScript 沙箱的几种方式
 slug: js-sandbox
 date: 2021-06-25 01:07:00
-thumbnail: ./images/cover/sandbox.jpeg
+thumbnail: ./images/cover/sandbox.jpg
 categories:
   - Coding
 tags:

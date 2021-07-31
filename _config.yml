@@ -12,10 +12,10 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.tore.moe
 root: /
-permalink: post/:slug/
+permalink: post/:slug
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -51,6 +51,11 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -82,8 +87,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -101,35 +106,59 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: inside
 
-# Aplayer
-# aplayer:
-  # meting: true
-  # asset_inject: false
-
-mmedia:
-  meting:
-    inject: false
-  dplayer:
-    cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    style_cdn: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-    hls_cdn: https://cdn.jsdelivr.net/npm/hls.j/dist/hls.min.js
-    dash_cdn: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_cdn: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_cdn: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_cdn: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
-    default:
-
+# Mathjax
 mathjax:
   disable: false
-  inlineQuote: $ # or `[$, $]`
-  blockQuote: $$ # or `[$$, $$]`
-  MathJax:
-    SVG:
-      font: STIX-Web
+  inlineQuote: [\(, \)]
+  blockQuote: [\@@@, \@@@]
+  # MathJax:
+  #   SVG:
+  #     font: STIX-Web
+
+# 多媒体
+# mmedia:
+#   audio:
+#     default:
+#   video:
+#     default:
+#   aplayer:
+#     js: https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js
+#     css: https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css
+#     default:
+#       contents:
+#   meting:
+#     js: https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
+#     api:
+#     default:
+#   dplayer:
+#     js: https://cdn.jsdelivr.net/npm/dplayer@1/dist/DPlayer.min.js
+#     hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
+#     dash_js: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+#     shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+#     flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
+#     webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+#     default:
+#       contents:
+#   bilibili:
+#     default:
+#       page: 1
+#       danmaku: true
+#       allowfullscreen: allowfullscreen
+#       sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+#       width: 100%
+#       max_width: 850px
+#       margin: auto
+#   xigua:
+#     default:
+#       autoplay: false
+#       startTime: 0
+#       allowfullscreen: allowfullscreen
+#       sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+#       width: 100%
+#       max_width: 850px
+#       margin: auto
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
-# deploy:
-  # type: git
-  # repo: git@193.149.162.202:/home/git/hexo.git
-  # branch: master
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: ''

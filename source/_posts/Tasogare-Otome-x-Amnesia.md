@@ -10,7 +10,7 @@ tags:
   - 怪谈
 ---
 
-{% meting "583506" "netease" "song" "autoplay" %}
+{% mmedia "meting" "id=583506" "server=netease" "type=song" "autoplay=true" %}
 
 ## 简
 
