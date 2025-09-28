@@ -1,0 +1,105 @@
+---
+import i18n from 'i18next';
+import { PortfolioCard } from '@/components/portfolio/portfolio-card';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+import { normalize } from '@/lib/normalize';
+import { getThemeConfig } from '../config/theme';
+import { buildPager } from '../lib/pagination';
+import BlogLayout from './blog.astro';
+
+interface Props {
+  items: import('../lib/portfolios').PortfolioWithLink[];
+  currentPage: number;
+  totalPages: number;
+  pagePrefix?: string;
+  baseHref?: string;
+  title?: string;
+  description?: string;
+}
+
+const {
+  items,
+  currentPage,
+  totalPages,
+  title = i18n.t('Portfolios'),
+  description,
+} = Astro.props as Props;
+const config = getThemeConfig(i18n.language);
+const pagePrefix = (Astro.props as Props).pagePrefix ?? config.pagination?.prefix ?? 'page';
+const baseHref = (Astro.props as Props).baseHref ?? '/portfolios';
+const makeHref = (page: number) =>
+  page === 1 ? baseHref : normalize(`${baseHref}/${pagePrefix}/${page}`);
+const pagers = buildPager(currentPage, totalPages, makeHref, 1);
+---
+
+<BlogLayout content={{ title, description }}>
+  <main class="mx-auto p-6 max-w-6xl">
+    <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {items.map((portfolio) => <PortfolioCard portfolio={portfolio} client:load />)}
+    </div>
+
+    {
+      totalPages > 1 && (
+        <div class="mt-8">
+          <Pagination>
+            <PaginationContent>
+              {pagers.map((pager) => {
+                if (pager.disabled) {
+                  return null;
+                }
+                if (pager.type === 'prev') {
+                  return (
+                    <PaginationItem>
+                      <PaginationPrevious
+                        href={pager.disabled ? undefined : pager.link}
+                        aria-disabled={pager.disabled}
+                        className="!px-2.5 rounded-full"
+                      />
+                    </PaginationItem>
+                  );
+                }
+                if (pager.type === 'next') {
+                  return (
+                    <PaginationItem>
+                      <PaginationNext
+                        href={pager.disabled ? undefined : pager.link}
+                        aria-disabled={pager.disabled}
+                        className="!px-2.5 rounded-full"
+                      />
+                    </PaginationItem>
+                  );
+                }
+                if (pager.type === 'ellipsis') {
+                  return (
+                    <PaginationItem>
+                      <PaginationEllipsis />
+                    </PaginationItem>
+                  );
+                }
+                return (
+                  <PaginationItem>
+                    <PaginationLink
+                      href={pager.link}
+                      isActive={pager.active}
+                      className="rounded-full"
+                    >
+                      {pager.page}
+                    </PaginationLink>
+                  </PaginationItem>
+                );
+              })}
+            </PaginationContent>
+          </Pagination>
+        </div>
+      )
+    }
+  </main>
+</BlogLayout>

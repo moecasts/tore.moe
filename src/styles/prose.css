@@ -1,0 +1,176 @@
+@reference './global.css';
+
+.prose {
+  /* Basic typography */
+
+  @apply pb-[10vh] overflow-hidden text-foreground leading-relaxed;
+
+  /* Prevent long words/links from breaking layout */
+  @apply wrap-anywhere;
+
+
+  .prose-content {
+    display: contents;
+  }
+
+  [class^='media-'] {
+    @apply py-4;
+  }
+
+  h1 {
+    @apply mt-8 mb-6 pb-4 font-bold text-foreground text-3xl;
+  }
+
+  h2 {
+    @apply mt-6 mb-4 font-semibold text-foreground text-2xl;
+  }
+
+  h3 {
+    @apply mt-5 mb-3 font-semibold text-foreground text-xl;
+  }
+
+  h4 {
+    @apply mt-4 mb-2 font-semibold text-foreground text-lg;
+  }
+
+  h5 {
+    @apply mt-3 mb-2 font-semibold text-foreground text-base;
+  }
+
+  h6 {
+    @apply mt-3 mb-2 font-semibold text-muted-foreground text-sm;
+  }
+
+  img {
+    @apply my-4 rounded-lg max-w-full h-auto;
+  }
+
+  img + em {
+    @apply block mt-2 text-muted-foreground text-sm text-center;
+  }
+
+  :where(.prose-content) {
+    p {
+      @apply mb-4 text-foreground leading-7;
+    }
+
+    /* Link styles */
+    a {
+      @apply text-primary hover:text-primary/80 underline underline-offset-4 decoration-2 transition-colors duration-200;
+    }
+
+    /* Emphasized text */
+    strong,
+    b {
+      @apply font-semibold text-foreground;
+    }
+
+    em,
+    i {
+      @apply text-foreground italic;
+    }
+
+    /* Code styles */
+    code {
+      @apply bg-muted px-1.5 py-0.5 rounded font-mono text-muted-foreground text-sm;
+    }
+
+    pre {
+      @apply bg-muted my-4 p-4 border border-border rounded-lg overflow-x-auto;
+    }
+
+    pre code {
+      @apply bg-transparent p-0 text-sm;
+    }
+
+    /* List styles */
+    ul,
+    ol {
+      @apply mb-4 pl-6;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    li {
+      @apply mb-2 text-foreground leading-6;
+    }
+
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+      @apply mt-2 mb-0;
+    }
+
+    /* Blockquote styles */
+    blockquote {
+      @apply border-l-4 border-primary pl-4 py-2 my-4 bg-muted/50 rounded-r-lg italic text-muted-foreground;
+    }
+
+    blockquote p {
+      @apply mb-0;
+    }
+
+    /* Table styles */
+    table {
+      @apply my-4 border border-border rounded-lg w-full overflow-auto border-collapse;
+    }
+
+    th {
+      @apply bg-muted p-3 border-border border-b font-semibold text-muted-foreground text-left text-nowrap;
+    }
+
+    td {
+      @apply p-3 border-border border-b text-foreground text-nowrap;
+    }
+
+    tr:last-child td {
+      @apply border-b-0;
+    }
+
+    /* Horizontal rule */
+    hr {
+      @apply my-8 border-border;
+    }
+
+    /* Task list */
+    input[type='checkbox'] {
+      @apply mr-2;
+    }
+
+    /* Footnotes */
+    .footnote-ref {
+      @apply text-primary no-underline;
+    }
+
+    /* mermaid */
+    [id^='mermaid-'] {
+      @apply m-auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        @apply text-2xl;
+      }
+
+      h2 {
+        @apply text-xl;
+      }
+
+      h3 {
+        @apply text-lg;
+      }
+
+      pre {
+        @apply text-xs;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+## Basic rules
+- The current project uses pnpm as the package management tool
+- The current project is based on Astro blog project
+- Use shadcn/ui as react component library
+- Use tailwindcss as css framework
+- Use biome.js as code linter, formatter
+- Use english as the main language

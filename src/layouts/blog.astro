@@ -1,0 +1,12 @@
+---
+import { BlogLayout } from '@/components/layouts/blog-layout';
+import MainLayout from './main.astro';
+
+const { content } = Astro.props;
+---
+
+<MainLayout content={content}>
+  <BlogLayout client:load currentPath={Astro.url.pathname}>
+    <slot />
+  </BlogLayout>
+</MainLayout>

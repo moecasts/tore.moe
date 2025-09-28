@@ -1,0 +1,163 @@
+---
+import i18n from 'i18next';
+import readingTime from 'reading-time';
+import { buttonVariants } from '@/components/ui/button';
+import { format, formatDuration } from '@/lib/date';
+import { extractDescription } from '@/lib/description';
+import { findMenuItemById } from '@/lib/menu';
+import { getSortedPosts } from '@/lib/posts';
+import BlogLayout from '../../../layouts/blog.astro';
+import '@/styles/prose.css';
+
+export async function getStaticPaths() {
+  // Sort by date, newest first
+  const sortedPosts = await getSortedPosts();
+  return sortedPosts.map((post, index) => ({
+    params: { slug: post.data.slug ?? post.slug },
+    props: {
+      post,
+      prevPost: sortedPosts[index + 1] || null,
+      nextPost: sortedPosts[index - 1] || null,
+    },
+  }));
+}
+
+const { post, prevPost, nextPost } = Astro.props;
+const { Content } = await post.render();
+
+const title = post.data.title ?? post.slug;
+const description = post.data.description ?? extractDescription(post.body);
+const category = post.data.categories?.[0]
+  ? findMenuItemById(post.data.categories[0], i18n.language)
+  : undefined;
+
+// SEO 相关数据
+const seoContent = {
+  title,
+  description,
+  image: post.data.thumbnail, // 文章封面图
+  date: post.data.date, // 发布日期
+  updated: post.data.lastModified, // 更新日期
+  category: category?.name, // 分类名称
+  tags: post.data.tags || [], // 标签数组
+};
+
+const time = readingTime(post.body);
+const words = time.words;
+const duration = formatDuration(
+  {
+    minutes: Math.max(1, Math.round(time.minutes)),
+  },
+  {
+    format: ['minutes'],
+  }
+);
+---
+
+<BlogLayout content={seoContent}>
+  <article class="mx-auto p-6 max-w-3xl prose">
+    <div class="relative prose-header">
+      {
+        post.data.thumbnail && (
+          <img
+            data-pagefind-meta="image[src], image_alt[alt]"
+            class="!m-0 w-full object-cover aspect-video sm:aspect-[2/1]"
+            src={post.data.thumbnail}
+            alt={post.data.title}
+          />
+        )
+      }
+      <!-- <div class="absolute flex flex-col gap-4 w-full -translate-y-full b-0"> -->
+      <div class="flex flex-col gap-4 pt-6 pb-4 border-b border-border w-full">
+        <h1 class="!m-0 !p-0">{post.data.title}</h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-muted-foreground">
+          {
+            category && (
+              <a
+                class="inline-flex items-center gap-1 !text-muted-foreground/80 hover:!underline !no-underline"
+                href={category.href}
+              >
+                <span class={`${category.icon} text-md`} />
+                <span class="text-sm">{category.name}</span>
+              </a>
+            )
+          }
+
+          <div data-pagefind-ignore class="inline-flex items-center gap-1">
+            <span class="text-md -translate-y-0.2 icon-[tabler--calendar]"></span>
+            <span class="text-sm" data-pagefind-meta="date">
+              {format(post.data.date as Date, 'PPP')}
+            </span>
+          </div>
+
+          <div data-pagefind-ignore class="inline-flex items-center gap-1">
+            <span class="text-md icon-[tabler--clock]"></span>
+            <span class="text-sm">{words} 字约 {duration}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose-content">
+      <Content />
+    </div>
+
+    {
+      post.data.tags && (
+        <div class="flex flex-wrap gap-4 mt-8">
+          {post.data.tags.map((tag: string) => (
+            <a
+              class={buttonVariants({
+                variant: 'secondary',
+                size: 'sm',
+                className: '!no-underline',
+              })}
+              href={`/tags/${tag}`}
+            >
+              # {tag}
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    <!-- Post navigation -->
+    {
+      (prevPost || nextPost) && (
+        <nav
+          data-pagefind-ignore="all"
+          class="flex justify-between items-center gap-4 mt-12 pt-6 border-t border-border"
+        >
+          <div class="flex-1 min-w-0 text-left">
+            {prevPost && (
+              <a
+                href={`/posts/${prevPost.data.slug ?? prevPost.slug}`}
+                class="inline-flex items-center gap-1 min-w-0 max-w-full hover:text-primary/80 !no-underline transition-colors duration-200"
+                title={prevPost.data.title}
+                aria-label={prevPost.data.title}
+              >
+                <span class="icon-[tabler--chevron-left] flex-shrink-0" />
+                <span class="truncate">{prevPost.data.title}</span>
+              </a>
+            )}
+          </div>
+
+          <div class="flex-1 min-w-0 text-right">
+            {nextPost && (
+              <a
+                href={`/posts/${nextPost.data.slug ?? nextPost.slug}`}
+                class="inline-flex items-center gap-1 min-w-0 max-w-full hover:text-primary/80 !no-underline transition-colors duration-200"
+                title={nextPost.data.title}
+                aria-label={nextPost.data.title}
+              >
+                <span class="truncate">{nextPost.data.title}</span>
+                <span class="icon-[tabler--chevron-right] flex-shrink-0" />
+              </a>
+            )}
+          </div>
+        </nav>
+      )
+    }
+  </article>
+</BlogLayout>

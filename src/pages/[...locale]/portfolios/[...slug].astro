@@ -1,0 +1,176 @@
+---
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
+import { format } from '@/lib/date';
+import { extractDescription } from '@/lib/description';
+import { getSortedPortfolios } from '@/lib/portfolios';
+import BlogLayout from '../../../layouts/blog.astro';
+import '@/styles/prose.css';
+
+export async function getStaticPaths() {
+  // Sort by date, newest first
+  const sortedPortfolios = await getSortedPortfolios();
+  return sortedPortfolios.map((portfolio, index) => ({
+    params: { slug: portfolio.data.slug ?? portfolio.slug },
+    props: {
+      portfolio,
+      prevPortfolio: sortedPortfolios[index + 1] || null,
+      nextPortfolio: sortedPortfolios[index - 1] || null,
+    },
+  }));
+}
+
+const { portfolio, prevPortfolio, nextPortfolio } = Astro.props;
+const { Content } = await portfolio.render();
+
+const title = portfolio.data.title ?? portfolio.slug;
+const description = portfolio.data.description ?? extractDescription(portfolio.body);
+
+// SEO related data
+const seoContent = {
+  title,
+  description,
+  image: portfolio.data.thumbnail,
+  date: portfolio.data.date,
+  updated: portfolio.data.lastModified,
+  tags: portfolio.data.tags || [],
+};
+---
+
+<BlogLayout content={seoContent}>
+  <article class="mx-auto p-6 max-w-4xl prose">
+    <div class="relative prose-header">
+      {
+        portfolio.data.thumbnail && (
+          <img
+            data-pagefind-meta="image[src], image_alt[alt]"
+            class="!m-0 rounded-xl w-full object-cover aspect-video sm:aspect-[2/1]"
+            src={portfolio.data.thumbnail}
+            alt={portfolio.data.title}
+          />
+        )
+      }
+      <div class="flex flex-col gap-4 pt-6 pb-4 border-b border-border w-full">
+        <div class="flex flex-col justify-between items-start gap-4">
+          <h1 class="flex-1 !m-0 !p-0">{portfolio.data.title}</h1>
+
+          {
+            portfolio.data.description && (
+              <p class="!m-0 text-muted-foreground">{portfolio.data.description}</p>
+            )
+          }
+
+          <div class="flex flex-wrap items-center gap-4">
+            {
+              portfolio.data.date && (
+                <div
+                  data-pagefind-ignore
+                  class="inline-flex items-center gap-1 text-muted-foreground"
+                >
+                  <span class="text-md -translate-y-0.2 icon-[tabler--calendar]" />
+                  <span class="text-sm" data-pagefind-meta="date">
+                    {format(portfolio.data.date as Date, 'PPP')}
+                  </span>
+                </div>
+              )
+            }
+
+            {
+              portfolio.data.demo && (
+                <a
+                  href={portfolio.data.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={buttonVariants({
+                    variant: 'default',
+                    size: 'icon',
+                    className: '!size-8',
+                  })}
+                >
+                  <span class="icon-[tabler--external-link]" />
+                </a>
+              )
+            }
+
+            {
+              portfolio.data.github && (
+                <a
+                  href={portfolio.data.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={buttonVariants({
+                    variant: 'outline',
+                    size: 'sm',
+                  })}
+                >
+                  <span class="mr-1 icon-[tabler--brand-github]" />
+                  GitHub
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="prose-content">
+        <Content />
+      </div>
+
+      {
+        portfolio.data.tags && (
+          <div class="flex flex-wrap gap-4 mt-8">
+            {portfolio.data.tags.map((tag: string) => (
+              <a
+                class={buttonVariants({
+                  variant: 'secondary',
+                  size: 'sm',
+                  className: '!no-underline',
+                })}
+                href={`/portfolios/tags/${tag}`}
+              >
+                # {tag}
+              </a>
+            ))}
+          </div>
+        )
+      }
+      <!-- Portfolio navigation -->
+      {
+        (prevPortfolio || nextPortfolio) && (
+          <nav
+            data-pagefind-ignore="all"
+            class="flex justify-between items-center gap-4 mt-12 pt-6 border-t border-border"
+          >
+            <div class="flex-1 min-w-0 text-left">
+              {prevPortfolio && (
+                <a
+                  href={`/portfolios/${prevPortfolio.data.slug ?? prevPortfolio.slug}`}
+                  class="inline-flex items-center gap-1 min-w-0 max-w-full hover:text-primary/80 !no-underline transition-colors duration-200"
+                  title={prevPortfolio.data.title}
+                  aria-label={prevPortfolio.data.title}
+                >
+                  <span class="icon-[tabler--chevron-left] flex-shrink-0" />
+                  <span class="truncate">{prevPortfolio.data.title}</span>
+                </a>
+              )}
+            </div>
+
+            <div class="flex-1 min-w-0 text-right">
+              {nextPortfolio && (
+                <a
+                  href={`/portfolios/${nextPortfolio.data.slug ?? nextPortfolio.slug}`}
+                  class="inline-flex items-center gap-1 min-w-0 max-w-full hover:text-primary/80 !no-underline transition-colors duration-200"
+                  title={nextPortfolio.data.title}
+                  aria-label={nextPortfolio.data.title}
+                >
+                  <span class="truncate">{nextPortfolio.data.title}</span>
+                  <span class="icon-[tabler--chevron-right] flex-shrink-0" />
+                </a>
+              )}
+            </div>
+          </nav>
+        )
+      }
+    </div>
+  </article>
+</BlogLayout>
