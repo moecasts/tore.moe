@@ -1,4 +1,4 @@
-import { getThemeConfig } from '../config/theme';
+import { getThemeConfig } from '../config';
 
 /**
  * Flatten nested menu items recursively

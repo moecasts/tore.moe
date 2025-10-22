@@ -17,6 +17,10 @@
     @apply py-4;
   }
 
+  .art-video-player {
+    @apply !w-full aspect-video;
+  }
+
   h1 {
     @apply mt-8 mb-6 pb-4 font-bold text-foreground text-3xl;
   }

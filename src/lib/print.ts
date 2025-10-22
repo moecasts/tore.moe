@@ -1,8 +1,7 @@
 /**
- * Print multiple strings, joined with separator
- * @param separator Separator
- * @param args Array of strings to print
+ * Print utility function for joining strings with separator
  */
-export const print = (separator: string = ' - ', ...args: any[]) => {
-  return args.filter(Boolean).join(separator);
-};
+export function print(separator: string | undefined, ...args: (string | undefined)[]): string {
+  const validArgs = args.filter((arg): arg is string => Boolean(arg));
+  return validArgs.join(separator || ' - ');
+}

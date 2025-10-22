@@ -14,7 +14,6 @@ export const BlogHeader = () => {
       </div>
       <div className="flex items-center gap-3">
         <Search />
-        {/* <LanguageToggle /> */}
         <ThemeToggle />
       </div>
     </div>

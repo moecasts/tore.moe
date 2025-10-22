@@ -36,5 +36,7 @@
   "Copy failed": "Copy failed",
   "View": "View",
   "Portfolios": "Portfolios",
-  "Portfolios tagged with \"{{tag}}\"": "Portfolios tagged with \"{{tag}}\""
+  "Portfolios tagged with \"{{tag}}\"": "Portfolios tagged with \"{{tag}}\"",
+  "No data yet": "No data yet",
+  "<0>Tab</0> <0>Shift + Tab</0> to navigate · <0>Enter</0> to select · <0>Esc</0> to close": "<0>Tab</0> <0>Shift + Tab</0> to navigate · <0>Enter</0> to select · <0>Esc</0> to close"
 }

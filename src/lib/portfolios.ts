@@ -1,6 +1,6 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import { buildStaticPaths } from 'astro-react-i18next/utils';
-import { themeConfig } from '../config/theme';
+import { themeConfig } from '../config';
 
 /**
  * Portfolio type with link

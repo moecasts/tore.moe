@@ -1,10 +1,13 @@
 ---
-import i18n from 'i18next';
-import { normalize } from '@/lib/normalize';
-import { getThemeConfig } from '../../../../config/theme';
-import BlogIndex from '../../../../layouts/blog-index.astro';
-import { findMenuItemById } from '../../../../lib/menu';
-import { getCategoryStaticPaths, getPaginationConfig } from '../../../../lib/posts';
+import i18n from "i18next";
+import { normalize } from "@/lib/normalize";
+import { getThemeConfig } from "../../../../config";
+import BlogIndex from "../../../../layouts/blog-index.astro";
+import { findMenuItemById } from "../../../../lib/menu";
+import {
+  getCategoryStaticPaths,
+  getPaginationConfig,
+} from "../../../../lib/posts";
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   return await getCategoryStaticPaths({ paginate });

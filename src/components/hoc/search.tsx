@@ -1,7 +1,7 @@
 import { Content as DialogContent } from '@radix-ui/react-dialog';
 import { Command, Search as SearchIcon } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import {
   Dialog,
   DialogOverlay,
@@ -272,9 +272,14 @@ export const Search = () => {
 
           <div className="px-3 py-2 border-t">
             <p className="text-muted-foreground text-xs">
-              使用
-              <Kbd>Tab</Kbd> <Kbd>Shift + Tab</Kbd>导航， <Kbd>Enter</Kbd> 选择， <Kbd>Esc</Kbd>{' '}
-              关闭
+              <Trans
+                i18nKey={
+                  '<0>Tab</0> <0>Shift + Tab</0> to navigate · <0>Enter</0> to select · <0>Esc</0> to close'
+                }
+              >
+                <Kbd>Tab</Kbd> <Kbd>Shift + Tab</Kbd> to navigate · <Kbd>Enter</Kbd> to select ·{' '}
+                <Kbd>Esc</Kbd> to close
+              </Trans>
             </p>
           </div>
         </DialogContent>

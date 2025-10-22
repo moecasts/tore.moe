@@ -1,0 +1,95 @@
+{
+  "name": "astro-theme-tore",
+  "displayName": "Tore - Modern Astro Theme",
+  "version": "1.0.0",
+  "description": "A modern, feature-rich Astro theme for blogs and portfolios with internationalization support",
+  "author": "Caster",
+  "license": "MIT",
+  "homepage": "https://github.com/moecasts/astro-theme-tore",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moecasts/astro-theme-tore"
+  },
+  "demo": "https://astro-theme-tore.vercel.app",
+  "keywords": [
+    "astro",
+    "theme",
+    "blog",
+    "portfolio",
+    "i18n",
+    "tailwindcss",
+    "react",
+    "typescript",
+    "shadcn-ui"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "astroVersion": "^5.0.0",
+  "features": [
+    "i18n",
+    "dark-mode",
+    "blog",
+    "portfolio",
+    "search",
+    "rss",
+    "sitemap",
+    "seo",
+    "pwa",
+    "math",
+    "mermaid",
+    "mdx"
+  ],
+  "integrations": [
+    "@astrojs/react",
+    "@astrojs/mdx",
+    "@astrojs/sitemap",
+    "@astrojs/rss",
+    "astro-react-i18next",
+    "astro-pagefind",
+    "@vite-pwa/astro"
+  ],
+  "uiLibrary": "shadcn/ui",
+  "styling": "tailwindcss",
+  "presets": {
+    "minimal": {
+      "description": "Minimal setup with basic blog functionality",
+      "features": ["blog", "dark-mode", "seo"]
+    },
+    "blog": {
+      "description": "Full-featured blog with search and i18n",
+      "features": ["blog", "dark-mode", "search", "i18n", "rss", "seo"]
+    },
+    "portfolio": {
+      "description": "Portfolio-focused setup",
+      "features": ["portfolio", "dark-mode", "seo", "i18n"]
+    },
+    "full": {
+      "description": "All features enabled",
+      "features": [
+        "blog",
+        "portfolio",
+        "dark-mode",
+        "search",
+        "i18n",
+        "rss",
+        "seo",
+        "pwa",
+        "math",
+        "mermaid"
+      ]
+    }
+  },
+  "customization": {
+    "colors": true,
+    "fonts": true,
+    "layouts": true,
+    "components": true
+  },
+  "support": {
+    "docs": "https://github.com/moecasts/astro-theme-tore#readme",
+    "issues": "https://github.com/moecasts/astro-theme-tore/issues",
+    "discussions": "https://github.com/moecasts/astro-theme-tore/discussions"
+  }
+}

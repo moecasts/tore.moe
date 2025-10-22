@@ -1,6 +1,7 @@
 ---
-import i18n from 'i18next';
+import i18n, { t } from 'i18next';
 import { PortfolioCard } from '@/components/portfolio/portfolio-card';
+import { Empty, EmptyContent, EmptyHeader, EmptyMedia } from '@/components/ui/empty';
 import {
   Pagination,
   PaginationContent,
@@ -11,7 +12,7 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import { normalize } from '@/lib/normalize';
-import { getThemeConfig } from '../config/theme';
+import { getThemeConfig } from '../config';
 import { buildPager } from '../lib/pagination';
 import BlogLayout from './blog.astro';
 
@@ -42,9 +43,28 @@ const pagers = buildPager(currentPage, totalPages, makeHref, 1);
 
 <BlogLayout content={{ title, description }}>
   <main class="mx-auto p-6 max-w-6xl">
-    <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {items.map((portfolio) => <PortfolioCard portfolio={portfolio} client:load />)}
-    </div>
+    {
+      items.length === 0 && (
+        <Empty>
+          <EmptyHeader>
+            <EmptyMedia variant="icon">
+              <span class="size-6 icon-[tabler--box-multiple]" />
+            </EmptyMedia>
+            <EmptyContent>{t('No data yet')}</EmptyContent>
+          </EmptyHeader>
+        </Empty>
+      )
+    }
+
+    {
+      items.length > 0 && (
+        <div class="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((portfolio) => (
+            <PortfolioCard portfolio={portfolio} client:load />
+          ))}
+        </div>
+      )
+    }
 
     {
       totalPages > 1 && (

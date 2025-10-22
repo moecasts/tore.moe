@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getThemeConfig, type MenuConfig } from '@/config/theme';
+import { getThemeConfig, type MenuConfig } from '@/config';
 import { normalize } from '@/lib/normalize';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
@@ -79,7 +79,7 @@ export const BlogSidebar = (props: { currentPath?: string }) => {
           )}
 
           {config.profile?.bio && (
-            <div className="flex justify-center text-sm">
+            <div className="flex justify-center text-sm text-center">
               <p>{config.profile.bio}</p>
             </div>
           )}

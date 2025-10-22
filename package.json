@@ -1,12 +1,29 @@
 {
-  "name": "tore-app",
+  "name": "astro-theme-tore",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A modern, feature-rich Astro theme for blogs and portfolios with i18n support",
+  "keywords": [
+    "astro",
+    "theme",
+    "blog",
+    "portfolio",
+    "i18n",
+    "tailwindcss",
+    "react"
+  ],
+  "author": "moecasts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moecasts/astro-theme-tore"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "init": "node scripts/setup.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "format:astro": "prettier --write \"**/*.astro\"",

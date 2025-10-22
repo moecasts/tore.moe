@@ -67,8 +67,7 @@ const duration = formatDuration(
           />
         )
       }
-      <!-- <div class="absolute flex flex-col gap-4 w-full -translate-y-full b-0"> -->
-      <div class="flex flex-col gap-4 pt-6 pb-4 border-b border-border w-full">
+      <div class="flex flex-col gap-4 pt-6 pb-4 border-border border-b w-full">
         <h1 class="!m-0 !p-0">{post.data.title}</h1>
 
         <div class="flex flex-wrap items-center gap-4 text-muted-foreground">
@@ -93,7 +92,9 @@ const duration = formatDuration(
 
           <div data-pagefind-ignore class="inline-flex items-center gap-1">
             <span class="text-md icon-[tabler--clock]"></span>
-            <span class="text-sm">{words} 字约 {duration}</span>
+            <span class="text-sm"
+              >{i18n.t('{{words}} words, about {{duration}}', { words, duration })}</span
+            >
           </div>
         </div>
       </div>
@@ -127,7 +128,7 @@ const duration = formatDuration(
       (prevPost || nextPost) && (
         <nav
           data-pagefind-ignore="all"
-          class="flex justify-between items-center gap-4 mt-12 pt-6 border-t border-border"
+          class="flex justify-between items-center gap-4 mt-12 pt-6 border-border border-t"
         >
           <div class="flex-1 min-w-0 text-left">
             {prevPost && (
@@ -137,7 +138,7 @@ const duration = formatDuration(
                 title={prevPost.data.title}
                 aria-label={prevPost.data.title}
               >
-                <span class="icon-[tabler--chevron-left] flex-shrink-0" />
+                <span class="flex-shrink-0 icon-[tabler--chevron-left]" />
                 <span class="truncate">{prevPost.data.title}</span>
               </a>
             )}
@@ -152,7 +153,7 @@ const duration = formatDuration(
                 aria-label={nextPost.data.title}
               >
                 <span class="truncate">{nextPost.data.title}</span>
-                <span class="icon-[tabler--chevron-right] flex-shrink-0" />
+                <span class="flex-shrink-0 icon-[tabler--chevron-right]" />
               </a>
             )}
           </div>
