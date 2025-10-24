@@ -65,6 +65,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "^16.0.0",
+    "react-markdown": "^10.1.0",
     "reading-time": "^1.5.0",
     "rehype-mathjax": "^7.1.0",
     "rehype-mermaid": "^3.0.0",

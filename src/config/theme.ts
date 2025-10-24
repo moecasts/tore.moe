@@ -85,6 +85,113 @@ export interface PaginationConfig {
 /**
  * Profile config type
  */
+/**
+ * About page config type
+ */
+
+// Timeline item type
+export interface TimelineItem {
+  period: string;
+  title: string;
+  company: string | { icon?: string; name: string };
+  /**
+   * support markdown
+   */
+  description: string | string[];
+}
+
+// Skill category type
+export interface SkillCategory {
+  category: string;
+  icon?: string; // 'code' | 'server' | 'cloud' or custom image URL
+  skills: (string | { name: string; icon?: string })[];
+}
+
+// Social link type
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon:
+    | 'Github'
+    | 'Linkedin'
+    | 'Twitter'
+    | 'Instagram'
+    | 'Facebook'
+    | 'Youtube'
+    | 'Mail'
+    | 'Globe'
+    | string; // Predefined icons or custom icon class
+}
+
+// Hero section - for page header with large title and description
+export interface HeroSection {
+  type: 'hero';
+  title: string;
+  /**
+   * support markdown
+   */
+  content: string;
+}
+
+// Text section - supports single or multiple paragraphs
+export interface TextSection {
+  type: 'text';
+  title: string;
+  /**
+   * support markdown
+   */
+  content: string | string[];
+}
+
+// Skills section - for skill categories with icons
+export interface SkillsSection {
+  type: 'skills';
+  title: string;
+  content: SkillCategory[];
+}
+
+// List section - for simple bullet point lists
+export interface ListSection {
+  type: 'list';
+  title: string;
+  content: string[];
+}
+
+// Timeline section - for experience, education, etc.
+export interface TimelineSection {
+  type: 'timeline';
+  title: string;
+  content: TimelineItem[];
+}
+
+// Social links section - for social media and contact links
+export interface SocialLinksSection {
+  type: 'social';
+  title: string;
+  description?: string | string[];
+  content: SocialLink[];
+}
+
+// Separator section - for visual separation between sections
+export interface SeparatorSection {
+  type: 'separator';
+}
+
+// Union type for all section types
+export type AboutSection =
+  | HeroSection
+  | TextSection
+  | SkillsSection
+  | ListSection
+  | TimelineSection
+  | SocialLinksSection
+  | SeparatorSection;
+
+export interface AboutConfig extends Array<AboutSection> {}
+
+/**
+ * Profile config type
+ */
 export interface ProfileConfig {
   name?: string;
   avatar?: string;
@@ -103,6 +210,7 @@ export interface FullThemeConfig {
   site?: LocalizedConfig<SiteConfig>;
   profile?: LocalizedConfig<ProfileConfig>;
   menu?: LocalizedConfig<MenuConfig>;
+  about?: LocalizedConfig<AboutConfig>;
   meta?: MetaConfig;
   datetime?: DateTimeConfig;
   pagination?: PaginationConfig;
@@ -153,6 +261,7 @@ export function getThemeConfig(locale: string = 'zh-CN'): {
   site?: SiteConfig;
   profile?: ProfileConfig;
   menu?: MenuConfig;
+  about?: AboutConfig;
   meta?: MetaConfig;
   datetime?: DateTimeConfig;
   pagination?: PaginationConfig;
@@ -161,6 +270,7 @@ export function getThemeConfig(locale: string = 'zh-CN'): {
     site: getLocalizedValue(themeConfig.site, locale),
     profile: getLocalizedValue(themeConfig.profile, locale),
     menu: getLocalizedValue(themeConfig.menu, locale),
+    about: getLocalizedValue(themeConfig.about, locale),
     meta: themeConfig.meta,
     datetime: themeConfig.datetime,
     pagination: themeConfig.pagination,

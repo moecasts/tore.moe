@@ -1,0 +1,37 @@
+---
+import { buildStaticPaths } from 'astro-react-i18next/utils';
+import i18n from 'i18next';
+import { AboutPage } from '@/components/pages/about-page';
+import { getThemeConfig } from '@/config';
+import { findMenuItemById } from '@/lib';
+import BlogLayout from '../../layouts/blog.astro';
+
+export async function getStaticPaths() {
+  const { about } = getThemeConfig(i18n.language);
+  if (!about) {
+    return [];
+  }
+
+  return buildStaticPaths();
+}
+
+const { about, site } = getThemeConfig(Astro.currentLocale);
+
+const { name: title } = findMenuItemById('about', i18n.language);
+
+const descriptionSection = about?.find(
+  (type) => type.type === 'hero' || type.type === 'text'
+)?.content;
+
+const description =
+  (descriptionSection && Array.isArray(descriptionSection)
+    ? descriptionSection
+    : [descriptionSection]
+  ).join(' ') ||
+  site?.description ||
+  i18n.t('About me');
+---
+
+<BlogLayout content={{ title, description }}>
+  {about && <AboutPage client:load about={about} />}
+</BlogLayout>
