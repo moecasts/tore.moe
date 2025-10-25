@@ -11,6 +11,8 @@ tags:
   - iframe
   - 沙箱
   - SES
+filters:
+  - 前端
 ---
 
 ## 前言
@@ -20,7 +22,7 @@ tags:
 ### JS 中沙箱的使用场景
 
 - jsonp：解析服务器所返回的 jsonp 请求时，如果不信任 jsonp 中的数据，可以通过创建沙箱的方式来解析获取数据；（TSW 中处理 jsonp 请求时，创建沙箱来处理和解析数据）；执行第三方 js：当你有必要执行第三方 js 的时候，而这份 js 文件又不一定可信的时候；
-- 在线代码编辑器：相信大家都有使用过一些在线代码编辑器，而这些代码的执行，基本都会放置在沙箱中，防止对页面本身造成影响；（例如：https://codesandbox.io/s/new）
+- 在线代码编辑器：相信大家都有使用过一些在线代码编辑器，而这些代码的执行，基本都会放置在沙箱中，防止对页面本身造成影响；（例如：<https://codesandbox.io/s/new）>
 
 - vue 的服务端渲染：vue 的服务端渲染实现中，通过创建沙箱执行前端的 bundle 文件；在调用 createBundleRenderer 方法时候，允许配置 runInNewContext 为 true 或 false 的形式，判断是否传入一个新创建的 sandbox 对象以供 vm 使用；
 - vue 模板中表达式计算：vue 模板中表达式的计算被放在沙盒中，只能访问全局变量的一个白名单，如 Math 和 Date 。你不能够在模板表达式中试图访问用户定义的全局变量。
@@ -50,7 +52,7 @@ document.body.appendChild(frame);
 
 // iframe 接收到消息后处理
 const code = `
-	return dataInIframe.filter((item) => item % 2 === 0)
+ return dataInIframe.filter((item) => item % 2 === 0)
 `;
 frame.contentWindow.addEventListener('message', function (e) {
   const func = new frame.contentWindow.Function('dataInIframe', code);
@@ -71,11 +73,11 @@ parent.addEventListener(
 
 关于 iframe sandbox 的更多介绍：
 
-https://github.com/xitu/gold-miner/blob/master/article/2020/sandboxed-iframes.md
+<https://github.com/xitu/gold-miner/blob/master/article/2020/sandboxed-iframes.md>
 
 相关实现库：
 
-https://github.com/asvd/jailed
+<https://github.com/asvd/jailed>
 
 ### 基于 Proxy 的沙箱环境实现
 
@@ -92,7 +94,7 @@ JavaScript 在查找某个未使用命名空间的变量时，会通过作用于
 - **利**：with 语句可以在不造成性能损失的情況下，减少变量的长度。其造成的附加计算量很少。使用 'with' 可以减少不必要的指针路径解析运算。需要注意的是，很多情況下，也可以不使用 with 语句，而是使用一个临时变量来保存指针，来达到同样的效果。
 - **弊**：with 语句使得程序在查找变量值时，都是先在指定的对象中查找。所以那些本来不是这个对象的属性的变量，查找起来将会很慢。如果是在对性能要求较高的场合，'with' 下面的 statement 语句中的变量，只应该包含这个指定对象的属性
 
-相关文档：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/with
+相关文档：<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/with>
 
 ### ES6 Proxy
 
@@ -189,7 +191,7 @@ function compileCode(code) {
 
 微前端框架 `qiankun` 的沙箱原理：
 
-https://juejin.cn/post/6920110573418086413
+<https://juejin.cn/post/6920110573418086413>
 
 ### 仍在提案中的 SES
 
@@ -215,7 +217,7 @@ https://juejin.cn/post/6920110573418086413
 
 相关文档：
 
-https://www.npmjs.com/package/ses
+<https://www.npmjs.com/package/ses>
 
 由于该特性仍在提案中，因此未来改动可能会比较大，例如，最初是由 iframe 来实现，但现在已经由 `Proxy + Object.freeze` 来实现了。
 

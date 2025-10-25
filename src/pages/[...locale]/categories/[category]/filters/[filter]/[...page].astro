@@ -3,27 +3,35 @@ import i18n from 'i18next';
 import BlogIndex from '@/layouts/blog-index.astro';
 import { getCategoryLink } from '@/lib/link';
 import { findMenuItemById } from '@/lib/menu';
-import { getCategoryStaticPaths } from '@/lib/posts';
+import { getCategoryFilterStaticPaths } from '@/lib/posts';
+import { getRealTagFromParams } from '@/lib/tag';
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
-  return await getCategoryStaticPaths({ paginate });
+  return await getCategoryFilterStaticPaths({ paginate });
 }
 
 const { page, filters } = Astro.props;
+
 const { category } = Astro.params;
-const cat = findMenuItemById(Astro.params.category, i18n.language);
-const baseLink = getCategoryLink({
-  category,
+
+const filter = getRealTagFromParams({
+  tag: Astro.params.filter,
+  page: Astro.params.page,
 });
+
+const cat = findMenuItemById(category, i18n.language);
 ---
 
 <BlogIndex
-  title={cat?.name}
+  title={`${cat?.name} - ${filter}`}
   items={page.data}
+  baseLink={getCategoryLink({
+    category,
+  })}
+  filters={filters}
   pagination={{
     current: page.currentPage,
     total: page.lastPage,
   }}
-  baseLink={baseLink}
-  filters={filters}
+  filter={filter}
 />

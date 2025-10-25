@@ -12,6 +12,7 @@ const posts = defineCollection({
     tags: z.array(z.string()).optional(),
     thumbnail: z.string().optional(),
     locale: z.string().optional(),
+    filters: z.array(z.string()).optional(),
   }),
 });
 

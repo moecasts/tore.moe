@@ -9,6 +9,8 @@ tags:
   - Docker
   - 开发环境
   - Docker-Compose
+filters:
+  - 开发
 ---
 
 ## 前言
@@ -17,13 +19,10 @@ tags:
 
 大多数时候是由于系统不同，依赖出现差异而导致的。因此，为了解决这个问题，基于 Docker 构建统一开发环境的需求便产生了。
 
-
 ## 使用 Docker 的好处
 
 - 部署方便：平常要搭建环境常常需要耗费几个小时，而且，对于团队协作时来说，每有新人进来，都需要浪费这可以避免的时间，而且搭建环境时，也常常会产生的各种问题，导致项目代码运行异常。如果使用了 Docker 的话，只需最开始的人写好开发容器，其他人只需要 pull 下来，即可完成项目环境的搭建，能有效避免无意义的时间浪费。
 - 隔离性：我们时常会在一台电脑部署多个项目环境，若是直接安装的话，彼此间有可能会造成干扰，比如一个项目需要 Node.js 14，有的又需要 Node.js 12，若是直接在本机部署的话，总是不能共存的，而是用 Docker 的话，则可以避免该问题。Docker 还能确保每个应用程序只使用分配给它的资源（包括 CPU、内存和磁盘空间）。一个特殊的软件将不会使用你全部的可用资源，要不然这将导致性能降低，甚至让其他应用程序完全停止工作。
-
-
 
 ## 实现
 
@@ -60,12 +59,10 @@ Windows 10 下安装 docker 比较简单，有如下几种方式：
 
 下载好之后双击 `Docker Desktop Installer.exe` 开始安装。
 
-
-
 ##### 使用 [winget](https://docs.microsoft.com/zh-cn/windows/package-manager/) 安装
 
 ```bash
-$ winget install Docker.DockerDesktop
+winget install Docker.DockerDesktop
 ```
 
 ##### 运行
@@ -80,8 +77,6 @@ Docker 启动之后会在 Windows 任务栏出现鲸鱼图标。
 
 等待片刻，当鲸鱼图标静止时，说明 Docker 启动成功，之后你可以打开 PowerShell/CMD/[Windows Terminal](https://docs.microsoft.com/zh-cn/windows/terminal/get-started) 使用 Docker。
 
-
-
 #### macOS
 
 ##### 使用 Homebrew 安装
@@ -89,7 +84,7 @@ Docker 启动之后会在 Windows 任务栏出现鲸鱼图标。
 [Homebrew](https://brew.sh/) 的 [Cask](https://github.com/Homebrew/homebrew-cask) 已经支持 Docker Desktop for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：
 
 ```bash
-$ brew install --cask docker
+brew install --cask docker
 ```
 
 ##### 手动下载安装
@@ -119,7 +114,7 @@ $ brew install --cask docker
 之后，你可以在终端通过命令检查安装后的 Docker 版本。
 
 ```bash
-$ docker --version
+docker --version
 ```
 
 ### 编写 Dockerfile
@@ -308,9 +303,9 @@ docker compose exec --user=me react /bin/zsh
 // index.js
 const mysql = require('mysql')
 const connection = mysql.createConnection({
-	host: 'mysql',
-	user: 'root',
-	password: 'password',
+ host: 'mysql',
+ user: 'root',
+ password: 'password',
   database: 'test',
 })
 
@@ -335,8 +330,6 @@ $ node index.js
 
 使用 Docker 来搭建开发环境十分方便，一次搭建，即可在许多机器上多次使用，即使是要重装系统，也不必在重复配置。
 
-
  如不喜欢写 Dockerfile 的话，也可以直接开启一个容器，然后进入容器配置完后，使用 docker save/export 导出即可。
 
-源码：https://github.com/MoeCasts/dockerfile-frontend
-
+源码：<https://github.com/MoeCasts/dockerfile-frontend>

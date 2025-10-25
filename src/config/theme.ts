@@ -203,6 +203,10 @@ export interface ProfileConfig {
   instagram?: string;
 }
 
+export type FilterConfig = {
+  column?: string;
+};
+
 /**
  * Full theme config type
  */
@@ -214,6 +218,7 @@ export interface FullThemeConfig {
   meta?: MetaConfig;
   datetime?: DateTimeConfig;
   pagination?: PaginationConfig;
+  filter?: FilterConfig;
 }
 
 /**
@@ -265,6 +270,7 @@ export function getThemeConfig(locale: string = 'zh-CN'): {
   meta?: MetaConfig;
   datetime?: DateTimeConfig;
   pagination?: PaginationConfig;
+  filter?: FilterConfig;
 } {
   return {
     site: getLocalizedValue(themeConfig.site, locale),
@@ -274,6 +280,7 @@ export function getThemeConfig(locale: string = 'zh-CN'): {
     meta: themeConfig.meta,
     datetime: themeConfig.datetime,
     pagination: themeConfig.pagination,
+    filter: themeConfig.filter,
   };
 }
 

@@ -8,6 +8,8 @@ categories:
 tags:
   - 操作系统
   - 学习
+filters:
+  - 学习
 ---
 
 ## 考题

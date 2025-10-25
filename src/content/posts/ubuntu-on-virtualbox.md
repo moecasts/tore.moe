@@ -9,6 +9,8 @@ tags:
 - Linux
 - 操作系统
 - Virtualbox
+filters:
+  - 学习
 ---
 
 ## 安装
@@ -80,8 +82,6 @@ sudo reboot
 ### 更换源
 
 加快软件包下载速度等。
-
-
 
 备份原始源文件 `source.list`
 

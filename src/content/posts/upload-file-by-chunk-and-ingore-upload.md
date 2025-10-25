@@ -9,6 +9,8 @@ tags:
 - 文件上传
 - 切片上传
 - 秒传
+filters:
+  - 全栈
 ---
 
 ## 流程
@@ -45,8 +47,6 @@ concat --> response(返回文件信息)
 ```yaml
 Authorization: Bearer Token
 ```
-
-
 
 ##### Body
 

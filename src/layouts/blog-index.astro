@@ -24,6 +24,8 @@ interface Props {
 
   title?: string;
   baseLink: string;
+  filters?: string[];
+  filter?: string;
 
   pagination: {
     current: number;
@@ -31,14 +33,30 @@ interface Props {
   };
 }
 
-const { items, currentPage, totalPages, title = '' } = Astro.props as Props;
-const config = getThemeConfig(i18n.language);
-const pagePrefix = (Astro.props as Props).pagePrefix ?? config.pagination?.prefix ?? 'page';
-const baseHref = (Astro.props as Props).baseHref ?? '/';
-const makeHref = (page: number) => (page === 1 ? baseHref : normalize(`/${pagePrefix}/${page}`));
-const pagers = buildPager(currentPage, totalPages, makeHref, 1);
+const props = Astro.props as Props;
+
+const {
+  items,
+  title = '',
+  pagination,
+
+  baseLink,
+  filter,
+} = props;
+
+const filters = props.filters || [];
+
+const isFilterSelected = (currentFilter?: string) => {
+  return (!currentFilter && !filter) || currentFilter === filter;
+};
+
 const makePaginateLink = (page: number) => {
-  const link = baseLink;
+  const link = filter
+    ? getFilterLink({
+        base: baseLink,
+        filter: filter,
+      })
+    : baseLink;
 
   return getPaginateLink({ link, page });
 };
@@ -47,6 +65,47 @@ const pagers = buildPager(pagination.current, pagination.total, makePaginateLink
 ---
 
 <BlogLayout content={{ title }}>
+  {
+    filters.length > 0 && (
+      <div class="-mx-2 -mt-2 px-2 border-b-1 border-b-border">
+        <div class="mx-auto p-6 max-w-3xl">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="mr-1 text-muted-foreground text-sm">{t('Filter')}</span>
+            {baseLink && (
+              <a
+                href={baseLink}
+                class={cn(
+                  badgeVariants({
+                    variant: isFilterSelected() ? 'default' : 'outline',
+                  }),
+                  'gap-1'
+                )}
+              >
+                {t('All')}
+              </a>
+            )}
+            {filters?.map((filter) => {
+              return (
+                <a
+                  href={getFilterLink({
+                    base: baseLink,
+                    filter,
+                  })}
+                  class={cn(
+                    badgeVariants({
+                      variant: isFilterSelected(filter) ? 'default' : 'outline',
+                    })
+                  )}
+                >
+                  {filter}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    )
+  }
   <main class="mx-auto p-6 max-w-3xl">
     {
       items.length === 0 && (

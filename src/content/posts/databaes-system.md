@@ -7,6 +7,8 @@ categories:
 - Coding
 tags:
 - 数据库
+filters:
+  - 学习
 ---
 
 ## 第一章 数据库系统概论
@@ -218,7 +220,7 @@ tags:
 
 事务管理器：负责保证系统的完整性，保证多个同时运行的事务不发生冲突操作，以及保证当系统发生故障时数据不会丢失 。
 
-#### 开发、管理和使用数据库系统的人员：
+#### 开发、管理和使用数据库系统的人员
 
 - 数据库管理员
 - 系统分析员
@@ -252,13 +254,11 @@ drop database demo;
 -- 创建数据表
 create table student (
     id char(10) not null,
-	name varchar(50) not null,
+ name varchar(50) not null,
     sex char(2) check(sex = '男' or sex = '女'),
     birthday datetime check(birthday between '1900-01-01' and getdate())
 )
 ```
-
-
 
 ### 查询
 

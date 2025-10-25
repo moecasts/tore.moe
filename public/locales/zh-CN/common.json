@@ -38,5 +38,8 @@
   "Portfolios": "作品集",
   "Portfolios tagged with \"{{tag}}\"": "标签为\"{{tag}}\"的作品集",
   "No data yet": "无数据",
-  "<0>Tab</0> <0>Shift + Tab</0> to navigate · <0>Enter</0> to select · <0>Esc</0> to close": "<0>Tab</0> <0>Shift + Tab</0> 导航 · <0>Enter</0> 选择 · <0>Esc</0> 关闭"
+  "<0>Tab</0> <0>Shift + Tab</0> to navigate · <0>Enter</0> to select · <0>Esc</0> to close": "<0>Tab</0> <0>Shift + Tab</0> 导航 · <0>Enter</0> 选择 · <0>Esc</0> 关闭",
+  "Filter by tag:": "标签筛选：",
+  "Filter": "筛选：",
+  "All": "全部"
 }

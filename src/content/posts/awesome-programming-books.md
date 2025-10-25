@@ -8,6 +8,8 @@ categories:
 tags:
 - 读书
 - 学习
+filters:
+  - 学习
 copyright:
   license: 转自 (<a href="https://github.com/royeo/awesome-programming-books"
     rel=\"external nofollow\" target=\"_blank\">royeo/awesome-programming-books</a>)
