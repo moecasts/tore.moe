@@ -11,34 +11,50 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
-import { normalize } from '@/lib/normalize';
-import { getThemeConfig } from '../config';
-import { buildPager } from '../lib/pagination';
+import { getFilterLink, getPaginateLink } from '@/lib/link';
+import { buildPager } from '@/lib/pagination';
+import type { PortfolioWithLink } from '@/lib/portfolios';
 import BlogLayout from './blog.astro';
 
 interface Props {
-  items: import('../lib/portfolios').PortfolioWithLink[];
-  currentPage: number;
-  totalPages: number;
-  pagePrefix?: string;
-  baseHref?: string;
+  items: PortfolioWithLink[];
+
   title?: string;
   description?: string;
+  baseLink: string;
+  filters?: string[];
+  filter?: string;
+
+  pagination: {
+    current: number;
+    total: number;
+  };
 }
+
+const props = Astro.props as Props;
 
 const {
   items,
-  currentPage,
-  totalPages,
   title = i18n.t('Portfolios'),
   description,
-} = Astro.props as Props;
-const config = getThemeConfig(i18n.language);
-const pagePrefix = (Astro.props as Props).pagePrefix ?? config.pagination?.prefix ?? 'page';
-const baseHref = (Astro.props as Props).baseHref ?? '/portfolios';
-const makeHref = (page: number) =>
-  page === 1 ? baseHref : normalize(`${baseHref}/${pagePrefix}/${page}`);
-const pagers = buildPager(currentPage, totalPages, makeHref, 1);
+  pagination,
+
+  baseLink,
+  filter,
+} = props;
+
+const makePaginateLink = (page: number) => {
+  const link = filter
+    ? getFilterLink({
+        base: baseLink,
+        filter: filter,
+      })
+    : baseLink;
+
+  return getPaginateLink({ link, page });
+};
+
+const pagers = buildPager(pagination.current, pagination.total, makePaginateLink);
 ---
 
 <BlogLayout content={{ title, description }}>
@@ -67,7 +83,7 @@ const pagers = buildPager(currentPage, totalPages, makeHref, 1);
     }
 
     {
-      totalPages > 1 && (
+      pagination.total > 1 && (
         <div class="mt-8">
           <Pagination>
             <PaginationContent>

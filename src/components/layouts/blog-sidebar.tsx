@@ -29,8 +29,13 @@ export const BlogSidebar = (props: { currentPath?: string }) => {
     const currentPath = normalize(props.currentPath || '');
     const itemHref = normalize(link);
     const itemHrefWithPagination = normalize(`${itemHref}/${config.pagination?.prefix}/`);
+    const itemHrefWithFilter = normalize(`${itemHref}/filters/`);
 
-    return currentPath === itemHref || currentPath.startsWith(itemHrefWithPagination);
+    return (
+      currentPath === itemHref ||
+      currentPath.startsWith(itemHrefWithFilter) ||
+      currentPath.startsWith(itemHrefWithPagination)
+    );
   };
 
   const renderItems = (items: MenuConfig): ReactNode[] => {

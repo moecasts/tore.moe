@@ -3,8 +3,8 @@ import { buildStaticPaths } from 'astro-react-i18next/utils';
 import i18n from 'i18next';
 import { AboutPage } from '@/components/pages/about-page';
 import { getThemeConfig } from '@/config';
+import BlogLayout from '@/layouts/blog.astro';
 import { findMenuItemById } from '@/lib';
-import BlogLayout from '../../layouts/blog.astro';
 
 export async function getStaticPaths() {
   const { about } = getThemeConfig(i18n.language);

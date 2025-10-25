@@ -1,19 +1,19 @@
 ---
-import BlogIndex from '../../layouts/blog-index.astro';
-import { getMainPageStaticPaths, getPaginationConfig } from '../../lib/posts';
+import BlogIndex from '@/layouts/blog-index.astro';
+import { getMainPageStaticPaths } from '@/lib/posts';
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   return await getMainPageStaticPaths({ paginate });
 }
 
 const { page } = Astro.props;
-const { prefix: pagePrefix } = getPaginationConfig();
 ---
 
 <BlogIndex
   items={page.data}
-  currentPage={page.currentPage}
-  totalPages={page.lastPage}
-  pagePrefix={pagePrefix}
-  baseHref="/"
+  pagination={{
+    current: page.currentPage,
+    total: page.lastPage,
+  }}
+  baseLink="/"
 />

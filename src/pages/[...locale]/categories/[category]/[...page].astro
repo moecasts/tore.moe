@@ -1,13 +1,9 @@
 ---
-import i18n from "i18next";
-import { normalize } from "@/lib/normalize";
-import { getThemeConfig } from "../../../../config";
-import BlogIndex from "../../../../layouts/blog-index.astro";
-import { findMenuItemById } from "../../../../lib/menu";
-import {
-  getCategoryStaticPaths,
-  getPaginationConfig,
-} from "../../../../lib/posts";
+import i18n from 'i18next';
+import BlogIndex from '@/layouts/blog-index.astro';
+import { getCategoryLink } from '@/lib/link';
+import { findMenuItemById } from '@/lib/menu';
+import { getCategoryStaticPaths } from '@/lib/posts';
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   return await getCategoryStaticPaths({ paginate });
@@ -15,17 +11,18 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
 const { page } = Astro.props;
 const { category } = Astro.params;
-
-const cat = findMenuItemById(category, i18n.language);
-const linkPrefix = normalize(cat?.href || `/categories/${category}`);
-const { prefix: paginationPrefix } = getPaginationConfig();
+const cat = findMenuItemById(Astro.params.category, i18n.language);
+const baseLink = getCategoryLink({
+  category,
+});
 ---
 
 <BlogIndex
   title={cat?.name}
   items={page.data}
-  currentPage={page.currentPage}
-  totalPages={page.lastPage}
-  pagePrefix={`${linkPrefix}/${paginationPrefix}`}
-  baseHref={linkPrefix}
+  pagination={{
+    current: page.currentPage,
+    total: page.lastPage,
+  }}
+  baseLink={baseLink}
 />

@@ -2,11 +2,11 @@
 import i18n from 'i18next';
 import readingTime from 'reading-time';
 import { buttonVariants } from '@/components/ui/button';
+import BlogLayout from '@/layouts/blog.astro';
 import { format, formatDuration } from '@/lib/date';
 import { extractDescription } from '@/lib/description';
 import { findMenuItemById } from '@/lib/menu';
 import { getSortedPosts } from '@/lib/posts';
-import BlogLayout from '../../../layouts/blog.astro';
 import '@/styles/prose.css';
 
 export async function getStaticPaths() {

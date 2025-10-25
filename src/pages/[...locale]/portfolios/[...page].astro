@@ -1,24 +1,25 @@
 ---
 import i18n from 'i18next';
+import PortfolioIndex from '@/layouts/portfolio-index.astro';
+import { getPortfoliosLink } from '@/lib/link';
 import { findMenuItemById } from '@/lib/menu';
-import PortfolioIndex from '../../../layouts/portfolio-index.astro';
-import { getPaginationConfig, getPortfoliosStaticPaths } from '../../../lib/portfolios';
+import { getPortfoliosStaticPaths } from '@/lib/portfolios';
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   return await getPortfoliosStaticPaths({ paginate });
 }
 
 const { page } = Astro.props;
-const { prefix: pagePrefix } = getPaginationConfig();
 
 const cat = findMenuItemById('portfolios', i18n.language);
 ---
 
 <PortfolioIndex
   items={page.data}
-  currentPage={page.currentPage}
-  totalPages={page.lastPage}
-  pagePrefix={pagePrefix}
-  baseHref="/portfolios"
+  pagination={{
+    current: page.currentPage,
+    total: page.lastPage,
+  }}
+  baseLink={getPortfoliosLink()}
   title={cat?.name}
 />

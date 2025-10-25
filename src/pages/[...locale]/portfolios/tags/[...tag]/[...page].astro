@@ -1,23 +1,24 @@
 ---
 import i18n from 'i18next';
-import PortfolioIndex from '../../../../../layouts/portfolio-index.astro';
-import { getPaginationConfig, getTagStaticPaths } from '../../../../../lib/portfolios';
+import PortfolioIndex from '@/layouts/portfolio-index.astro';
+import { getPortfolioTagLink } from '@/lib/link';
+import { getTagStaticPaths } from '@/lib/portfolios';
 
 export async function getStaticPaths({ paginate }: { paginate: any }) {
   return await getTagStaticPaths({ paginate });
 }
 
 const { page } = Astro.props;
-const { prefix: pagePrefix } = getPaginationConfig();
 const tag = Astro.params.tag || '';
 ---
 
 <PortfolioIndex
   items={page.data}
-  currentPage={page.currentPage}
-  totalPages={page.lastPage}
-  pagePrefix={pagePrefix}
-  baseHref={`/portfolios/tags/${tag}`}
+  pagination={{
+    current: page.currentPage,
+    total: page.lastPage,
+  }}
   title={`${tag}`}
   description={i18n.t(`Portfolios tagged with "{{tag}}"`, { tag })}
+  baseLink={getPortfolioTagLink({ tag })}
 />

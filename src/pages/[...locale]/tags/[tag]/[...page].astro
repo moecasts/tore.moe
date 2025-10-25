@@ -1,0 +1,29 @@
+---
+import BlogIndex from '@/layouts/blog-index.astro';
+import { getTagLink } from '@/lib/link';
+import { getTagStaticPaths } from '@/lib/posts';
+import { getRealTagFromParams } from '@/lib/tag';
+
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+  const paths = await getTagStaticPaths({ paginate });
+  return paths;
+}
+
+const { page } = Astro.props;
+const tag = getRealTagFromParams({
+  tag: Astro.params.tag,
+  page: Astro.params.page,
+});
+---
+
+<BlogIndex
+  title={`${tag}`}
+  items={page.data}
+  pagination={{
+    current: page.currentPage,
+    total: page.lastPage,
+  }}
+  baseLink={getTagLink({
+    tag,
+  })}
+/>
